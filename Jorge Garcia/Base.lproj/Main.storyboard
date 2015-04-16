@@ -103,21 +103,29 @@
                             </label>
                             <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-NH-oXO">
                                 <rect key="frame" x="175" y="150" width="250" height="300"/>
-                                <color key="backgroundColor" red="0.72544587039999997" green="1" blue="0.83467170999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="XjW-vQ-Hf4"/>
                                     <constraint firstAttribute="height" constant="300" id="hD5-n7-ryT"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-xI-Qto">
+                                <rect key="frame" x="539" y="267" width="25" height="67"/>
+                                <fontDescription key="fontDescription" name="Superclarendon-Italic" family="Superclarendon" pointSize="55"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cwO-NH-oXO" secondAttribute="trailing" constant="120" id="1Ok-3f-tWQ"/>
+                            <constraint firstItem="tg7-xI-Qto" firstAttribute="centerY" secondItem="cwO-NH-oXO" secondAttribute="centerY" id="2D0-pb-xEJ"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="120" id="2yr-H2-QHf"/>
                             <constraint firstAttribute="centerX" secondItem="cwO-NH-oXO" secondAttribute="centerX" id="FTG-tt-vgh"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="HYC-9o-kTa"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="centerY" secondItem="lEC-eK-sVZ" secondAttribute="centerY" id="Ige-iS-ppq"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leading" constant="150" id="ShK-lU-q47"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tg7-xI-Qto" secondAttribute="trailing" constant="20" id="Uos-Xm-hUh"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="top" secondItem="8u3-mM-fn2" secondAttribute="bottom" constant="20" id="Xh1-Qf-HKo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AqC-ox-ehc" secondAttribute="bottom" constant="-80" id="eBx-i4-buG"/>
                             <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="12" id="mz6-qY-BVX"/>
