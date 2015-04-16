@@ -10,15 +10,18 @@ import UIKit
 
 class iosSkillsViewController: UIViewController {
 
+    @IBOutlet weak var imgBackground: UIImageView!
+    
+    var animacao:Animacao = Animacao()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        animacao.motionBackground(imgBackground)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func Voltar(sender: AnyObject) {

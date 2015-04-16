@@ -95,15 +95,34 @@
                                     <action selector="Voltar:" destination="yEt-0Y-62Y" eventType="touchUpInside" id="59n-jH-wKD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS Skills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV2-CY-98K">
+                                <rect key="frame" x="36" y="40" width="196" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Texto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-Bo-MNx">
+                                <rect key="frame" x="87" y="98" width="42" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="SV2-CY-98K" firstAttribute="centerX" secondItem="5WO-Bo-MNx" secondAttribute="leading" id="0b7-hZ-gxm"/>
+                            <constraint firstItem="SV2-CY-98K" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="HYC-9o-kTa"/>
+                            <constraint firstItem="SV2-CY-98K" firstAttribute="top" secondItem="8u3-mM-fn2" secondAttribute="bottom" constant="20" id="Xh1-Qf-HKo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AqC-ox-ehc" secondAttribute="bottom" constant="-80" id="eBx-i4-buG"/>
+                            <constraint firstItem="5WO-Bo-MNx" firstAttribute="top" secondItem="SV2-CY-98K" secondAttribute="bottom" constant="25" id="kBw-j1-q76"/>
                             <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="8" id="mz6-qY-BVX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AqC-ox-ehc" secondAttribute="leading" constant="200" id="p4Y-Xd-pNp"/>
                             <constraint firstItem="yqS-HC-Qnu" firstAttribute="top" secondItem="2oM-7Y-yiV" secondAttribute="bottom" constant="50" id="pGt-Py-BPN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgBackground" destination="AqC-ox-ehc" id="Yur-E7-xIc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wog-qZ-XEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
