@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="view1" title="Menu" id="BYZ-38-t0r" customClass="ViewController2" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view1" title="Menu" id="BYZ-38-t0r" customClass="ViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -57,6 +58,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btiOSSkills" destination="8o8-g4-ijX" id="Oa6-K1-SeF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +69,7 @@
         <!--Skills-->
         <scene sceneID="LI4-UX-L14">
             <objects>
-                <viewController title="Skills" id="yEt-0Y-62Y" sceneMemberID="viewController">
+                <viewController title="Skills" id="yEt-0Y-62Y" customClass="iosSkillsViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8u3-mM-fn2"/>
                         <viewControllerLayoutGuide type="bottom" id="yqS-HC-Qnu"/>
@@ -74,11 +78,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="xCode_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-ox-ehc">
-                                <rect key="frame" x="171" y="317" width="445" height="418"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xCode_icon" translatesAutoresizingMaskIntoConstraints="NO" id="AqC-ox-ehc">
+                                <rect key="frame" x="384" y="262" width="450" height="418"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="418" id="MZe-PP-rJQ"/>
+                                    <constraint firstAttribute="width" constant="450" id="QCX-Kf-EgQ"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-7Y-yiV">
+                                <rect key="frame" x="321" y="511" width="55" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Voltar:" destination="yEt-0Y-62Y" eventType="touchUpInside" id="59n-jH-wKD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="AqC-ox-ehc" secondAttribute="bottom" constant="-80" id="eBx-i4-buG"/>
+                            <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="8" id="mz6-qY-BVX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AqC-ox-ehc" secondAttribute="leading" constant="200" id="p4Y-Xd-pNp"/>
+                            <constraint firstItem="yqS-HC-Qnu" firstAttribute="top" secondItem="2oM-7Y-yiV" secondAttribute="bottom" constant="50" id="pGt-Py-BPN"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wog-qZ-XEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

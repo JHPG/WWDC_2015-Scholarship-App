@@ -18,9 +18,6 @@ class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        /* POST-IT -------------
-         *
         // set container frame and add to the screen
         self.container.frame = CGRect(x: 60, y: 60, width: 200, height: 200)
         self.view.addSubview(container)
@@ -37,8 +34,7 @@ class ViewController2: UIViewController {
         
         // for now just add the redSquare
         // we'll add blueSquare as part of the transition animation
-        self.container.addSubview(self.redSquare) 
-        */
+        self.container.addSubview(self.redSquare)   
     }
     
     @IBAction func animateButtonTapped(sender: AnyObject) {

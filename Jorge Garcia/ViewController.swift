@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imgFoto: UIImageView!
-    @IBOutlet weak var img2: UIImageView!
+    @IBOutlet weak var btiOSSkills: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +21,39 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     override func viewDidAppear(animated: Bool) {
-   
+        super.viewDidAppear(animated)
+        
+        
+        //Início dos frames
+        self.btiOSSkills.frame.origin = CGPoint(x: btiOSSkills.frame.origin.x, y: view.frame.height)
+        
+        //Animações
+        UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.btiOSSkills.frame.origin = CGPoint(x: self.btiOSSkills.frame.origin.x, y: self.btiOSSkills.frame.origin.x)
+            
+            
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 
