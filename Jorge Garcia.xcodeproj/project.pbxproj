@@ -15,7 +15,7 @@
 		D615214C1ADE9D1F006772DD /* Jorge_GarciaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615214B1ADE9D1F006772DD /* Jorge_GarciaTests.swift */; };
 		D63595D61ADF034200495E41 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63595D51ADF034200495E41 /* ViewController2.swift */; };
 		D6A963B31AE0072E00878FC1 /* iosSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B21AE0072E00878FC1 /* iosSkillsViewController.swift */; };
-		D6A963B61AE0287000878FC1 /* Animacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B51AE0287000878FC1 /* Animacao.swift */; };
+		D6A963B61AE0287000878FC1 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B51AE0287000878FC1 /* Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		D615214B1ADE9D1F006772DD /* Jorge_GarciaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jorge_GarciaTests.swift; sourceTree = "<group>"; };
 		D63595D51ADF034200495E41 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		D6A963B21AE0072E00878FC1 /* iosSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iosSkillsViewController.swift; sourceTree = "<group>"; };
-		D6A963B51AE0287000878FC1 /* Animacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animacao.swift; sourceTree = "<group>"; };
+		D6A963B51AE0287000878FC1 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		D61521321ADE9D1E006772DD /* Jorge Garcia */ = {
 			isa = PBXGroup;
 			children = (
-				D6A963B51AE0287000878FC1 /* Animacao.swift */,
+				D6A963B51AE0287000878FC1 /* Animations.swift */,
 				D6A963B41AE0214C00878FC1 /* Pages */,
 				D61521351ADE9D1E006772DD /* AppDelegate.swift */,
 				D61521371ADE9D1E006772DD /* ViewController.swift */,
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A963B31AE0072E00878FC1 /* iosSkillsViewController.swift in Sources */,
-				D6A963B61AE0287000878FC1 /* Animacao.swift in Sources */,
+				D6A963B61AE0287000878FC1 /* Animations.swift in Sources */,
 				D61521381ADE9D1E006772DD /* ViewController.swift in Sources */,
 				D61521361ADE9D1E006772DD /* AppDelegate.swift in Sources */,
 				D63595D61ADF034200495E41 /* ViewController2.swift in Sources */,

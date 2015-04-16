@@ -86,7 +86,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-7Y-yiV">
-                                <rect key="frame" x="321" y="511" width="55" height="39"/>
+                                <rect key="frame" x="317" y="511" width="55" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Voltar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,33 +95,47 @@
                                     <action selector="Voltar:" destination="yEt-0Y-62Y" eventType="touchUpInside" id="59n-jH-wKD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS Skills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV2-CY-98K">
-                                <rect key="frame" x="36" y="40" width="196" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Skills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV2-CY-98K">
+                                <rect key="frame" x="36" y="40" width="130" height="70"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Texto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-Bo-MNx">
-                                <rect key="frame" x="87" y="98" width="42" height="24"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwO-NH-oXO">
+                                <rect key="frame" x="175" y="150" width="250" height="300"/>
+                                <color key="backgroundColor" red="0.72544587039999997" green="1" blue="0.83467170999999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="XjW-vQ-Hf4"/>
+                                    <constraint firstAttribute="height" constant="300" id="hD5-n7-ryT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SV2-CY-98K" firstAttribute="centerX" secondItem="5WO-Bo-MNx" secondAttribute="leading" id="0b7-hZ-gxm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwO-NH-oXO" secondAttribute="trailing" constant="120" id="1Ok-3f-tWQ"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="120" id="2yr-H2-QHf"/>
+                            <constraint firstAttribute="centerX" secondItem="cwO-NH-oXO" secondAttribute="centerX" id="FTG-tt-vgh"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="HYC-9o-kTa"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="centerY" secondItem="lEC-eK-sVZ" secondAttribute="centerY" id="Ige-iS-ppq"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leading" constant="150" id="ShK-lU-q47"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="top" secondItem="8u3-mM-fn2" secondAttribute="bottom" constant="20" id="Xh1-Qf-HKo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AqC-ox-ehc" secondAttribute="bottom" constant="-80" id="eBx-i4-buG"/>
-                            <constraint firstItem="5WO-Bo-MNx" firstAttribute="top" secondItem="SV2-CY-98K" secondAttribute="bottom" constant="25" id="kBw-j1-q76"/>
-                            <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="8" id="mz6-qY-BVX"/>
+                            <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="12" id="mz6-qY-BVX"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="top" secondItem="SV2-CY-98K" secondAttribute="bottom" constant="40" id="nnf-KK-6EO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AqC-ox-ehc" secondAttribute="leading" constant="200" id="p4Y-Xd-pNp"/>
                             <constraint firstItem="yqS-HC-Qnu" firstAttribute="top" secondItem="2oM-7Y-yiV" secondAttribute="bottom" constant="50" id="pGt-Py-BPN"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1Ok-3f-tWQ"/>
+                                <exclude reference="2yr-H2-QHf"/>
+                                <exclude reference="ShK-lU-q47"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imgBackground" destination="AqC-ox-ehc" id="Yur-E7-xIc"/>
+                        <outlet property="postItView" destination="cwO-NH-oXO" id="nrZ-Et-6Wj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wog-qZ-XEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

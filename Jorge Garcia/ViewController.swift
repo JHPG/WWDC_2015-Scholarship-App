@@ -11,33 +11,25 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btiOSSkills: UIButton!
+    var flag: Bool = true
+    var animation: Animations = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        
-        //Início dos frames
-        self.btiOSSkills.frame.origin = CGPoint(x: btiOSSkills.frame.origin.x, y: view.frame.height)
-        
-        //Animações
-        UIView.animateWithDuration(2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            self.btiOSSkills.frame.origin = CGPoint(x: self.btiOSSkills.frame.origin.x, y: self.btiOSSkills.frame.origin.x)
-            
-            
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-        
+        if (flag){  //Animate only the first time
+            animation.bubble (btiOSSkills)
+            //
+            flag = false
+        }
     }
     
     
