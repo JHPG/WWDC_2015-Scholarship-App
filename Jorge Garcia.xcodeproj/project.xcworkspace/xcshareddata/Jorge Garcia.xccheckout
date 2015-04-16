@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9E2BF26-9D28-4889-A06E-53FB5605F92F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Jorge Garcia</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0B5E14EB2896271D74473A7CD7F4B744687ADD0D</key>
+		<string>https://bitbucket.org/jhpg/wwdc-app.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Jorge Garcia.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0B5E14EB2896271D74473A7CD7F4B744687ADD0D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/jhpg/wwdc-app.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0B5E14EB2896271D74473A7CD7F4B744687ADD0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0B5E14EB2896271D74473A7CD7F4B744687ADD0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WWDC%20App%20-JH</string>
+		</dict>
+	</array>
+</dict>
+</plist>

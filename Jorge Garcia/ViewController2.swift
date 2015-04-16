@@ -10,13 +10,17 @@ import UIKit
 
 class ViewController2: UIViewController {
 
-    let container = UIView()
+    @IBInspectable let container = UIView()
     let redSquare = UIView()
     let blueSquare = UIView()
+    @IBInspectable var postItColor:UIColor = UIColor.redColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        /* POST-IT -------------
+         *
         // set container frame and add to the screen
         self.container.frame = CGRect(x: 60, y: 60, width: 200, height: 200)
         self.view.addSubview(container)
@@ -28,12 +32,13 @@ class ViewController2: UIViewController {
         self.blueSquare.frame = redSquare.frame
         
         // set background colors
-        self.redSquare.backgroundColor = UIColor.redColor()
-        self.blueSquare.backgroundColor = UIColor.blueColor()
+        self.redSquare.backgroundColor = postItColor
+        self.blueSquare.backgroundColor = postItColor
         
         // for now just add the redSquare
         // we'll add blueSquare as part of the transition animation
-        self.container.addSubview(self.redSquare)   
+        self.container.addSubview(self.redSquare) 
+        */
     }
     
     @IBAction func animateButtonTapped(sender: AnyObject) {
