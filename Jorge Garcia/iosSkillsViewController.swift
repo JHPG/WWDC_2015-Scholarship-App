@@ -9,7 +9,12 @@
 import UIKit
 
 class iosSkillsViewController: UIViewController {
-
+    
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+    }
+    
+    
     @IBOutlet weak var imgBackground: UIImageView!
     //@IBOutlet weak var desc1: UILabel!
     @IBOutlet weak var postItView: UIView!
@@ -17,22 +22,18 @@ class iosSkillsViewController: UIViewController {
     var postIt:UIView = UIView()
     let animations:Animations = Animations()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animations.motionBackground(self.view)    //Add dynamic animation to background image
+        animations.motionBackground(postItView)    //Add dynamic animation to background image
+        animations.motionBackground(imgBackground)
         
-        postIt = animations.newPostItObject (postItView)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        postIt = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
-        animations.nextPostIt(postIt, base: postItView)
+        animations.nextPostIt(postIt, base: postItView)     //Next post-it to present
     }
     
     @IBAction func Voltar(sender: AnyObject) {
@@ -40,17 +41,5 @@ class iosSkillsViewController: UIViewController {
     }
     
     
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

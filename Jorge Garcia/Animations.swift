@@ -10,7 +10,7 @@ import UIKit
 
 class Animations: NSObject {
    
-    /** Add dynamic animation to background image  */
+    /** Add dynamic animation to background view  */
     func motionBackground (view: UIView){
         
         let horizontalMotionEffect =
@@ -50,28 +50,33 @@ class Animations: NSObject {
         
         //self.view.layoutIfNeeded()
         }, completion: nil)
-        
     }
     
     func newPostItObject(base: UIView) -> UIView {
-        //Shadow
-        var new = UIView()
+        //Base config
         base.layer.shadowColor = UIColor.blackColor().CGColor
-        base.layer.shadowOffset = CGSizeMake(5, 5)
+        base.layer.shadowOffset = CGSizeMake(4, 4)
+        base.layer.shadowOpacity = 0.8
         base.layer.shadowRadius = 5
-        base.layer.shadowOpacity = 0.5
+        base.layer.cornerRadius = 30
+        //base.layer.borderWidth = 1
+        //base.frame.or
+        
+        var temp:NSCoding
+        
         //Size and color
-        new.frame = base.frame                          //
-        new.backgroundColor = base.backgroundColor    //
+        var new = UIView()
+        new.frame = base.frame                              //
+        new.backgroundColor = base.backgroundColor          //
+        new.layer.cornerRadius = base.layer.cornerRadius    //
         new.frame.origin = CGPoint(x: 0, y: 0)
         base.addSubview (new)
         return new;
     }
     
     func nextPostIt (new:UIView, base:UIView){
-        let transitionOptions = UIViewAnimationOptions.TransitionCurlUp  // set a transition style
         
-        UIView.transitionWithView(new, duration: 0.6, options: transitionOptions, animations: {
+        UIView.transitionWithView(new, duration: 0.6, options: UIViewAnimationOptions.TransitionCurlUp, animations: {
             // remove the front object...
             //views.frontView.removeFromSuperview()
             
