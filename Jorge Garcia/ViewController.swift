@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animation.motionBackground (btiOSSkills)    //Add dynamic animation to button
     }
 
     override func didReceiveMemoryWarning() {

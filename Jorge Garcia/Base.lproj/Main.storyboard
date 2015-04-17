@@ -104,7 +104,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-TV-tRr">
-                                <rect key="frame" x="195" y="458" width="58" height="51"/>
+                                <rect key="frame" x="195" y="470" width="58" height="51"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -114,7 +114,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-le-ASk">
-                                <rect key="frame" x="354" y="458" width="51" height="51"/>
+                                <rect key="frame" x="354" y="470" width="51" height="51"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
                                 <state key="normal" title="Next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -131,7 +131,7 @@
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="120" id="2yr-H2-QHf"/>
                             <constraint firstItem="UZ0-TV-tRr" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="top" id="7HI-ti-vDI"/>
                             <constraint firstItem="UZ0-TV-tRr" firstAttribute="leading" secondItem="cwO-NH-oXO" secondAttribute="leading" constant="20" id="8Ku-cn-Zkl"/>
-                            <constraint firstItem="UZ0-TV-tRr" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="bottom" constant="8" symbolic="YES" id="Buj-M0-sjT"/>
+                            <constraint firstItem="UZ0-TV-tRr" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="bottom" constant="20" id="Buj-M0-sjT"/>
                             <constraint firstAttribute="centerX" secondItem="cwO-NH-oXO" secondAttribute="centerX" id="FTG-tt-vgh"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="HYC-9o-kTa"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="centerY" secondItem="lEC-eK-sVZ" secondAttribute="centerY" id="Ige-iS-ppq"/>
