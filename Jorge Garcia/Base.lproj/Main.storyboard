@@ -75,8 +75,8 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-7Y-yiV">
-                                <rect key="frame" x="317" y="511" width="55" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="36" y="531" width="72" height="39"/>
+                                <fontDescription key="fontDescription" name="Superclarendon-Italic" family="Superclarendon" pointSize="22"/>
                                 <state key="normal" title="Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -85,8 +85,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS Skills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SV2-CY-98K">
-                                <rect key="frame" x="36" y="40" width="130" height="70"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <rect key="frame" x="36" y="40" width="143" height="70"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="33"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -97,36 +97,92 @@
                                     <constraint firstAttribute="width" constant="250" id="XjW-vQ-Hf4"/>
                                     <constraint firstAttribute="height" constant="300" id="hD5-n7-ryT"/>
                                 </constraints>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="hD5-n7-ryT"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tg7-xI-Qto">
-                                <rect key="frame" x="539" y="267" width="25" height="67"/>
-                                <fontDescription key="fontDescription" name="Superclarendon-Italic" family="Superclarendon" pointSize="55"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-TV-tRr">
+                                <rect key="frame" x="195" y="458" width="58" height="51"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="yEt-0Y-62Y" eventType="touchUpInside" id="Vcx-mV-FVy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5h-le-ASk">
+                                <rect key="frame" x="354" y="458" width="51" height="51"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="25"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButton:" destination="yEt-0Y-62Y" eventType="touchUpInside" id="IjU-TN-tYr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cwO-NH-oXO" secondAttribute="trailing" constant="120" id="1Ok-3f-tWQ"/>
-                            <constraint firstItem="tg7-xI-Qto" firstAttribute="centerY" secondItem="cwO-NH-oXO" secondAttribute="centerY" id="2D0-pb-xEJ"/>
+                            <constraint firstItem="2oM-7Y-yiV" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="1YI-39-8HF"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="120" id="2yr-H2-QHf"/>
+                            <constraint firstItem="UZ0-TV-tRr" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="top" id="7HI-ti-vDI"/>
+                            <constraint firstItem="UZ0-TV-tRr" firstAttribute="leading" secondItem="cwO-NH-oXO" secondAttribute="leading" constant="20" id="8Ku-cn-Zkl"/>
+                            <constraint firstItem="UZ0-TV-tRr" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="bottom" constant="8" symbolic="YES" id="Buj-M0-sjT"/>
                             <constraint firstAttribute="centerX" secondItem="cwO-NH-oXO" secondAttribute="centerX" id="FTG-tt-vgh"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leadingMargin" constant="20" id="HYC-9o-kTa"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="centerY" secondItem="lEC-eK-sVZ" secondAttribute="centerY" id="Ige-iS-ppq"/>
+                            <constraint firstItem="g5h-le-ASk" firstAttribute="leading" secondItem="cwO-NH-oXO" secondAttribute="trailing" constant="8" id="Mdq-ic-06R"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="UZ0-TV-tRr" secondAttribute="trailing" constant="18" id="NaF-gc-Pd8"/>
+                            <constraint firstItem="g5h-le-ASk" firstAttribute="baseline" secondItem="UZ0-TV-tRr" secondAttribute="baseline" id="SWK-5l-bwi"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="lEC-eK-sVZ" secondAttribute="leading" constant="150" id="ShK-lU-q47"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tg7-xI-Qto" secondAttribute="trailing" constant="20" id="Uos-Xm-hUh"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="top" secondItem="SV2-CY-98K" secondAttribute="bottom" constant="40" id="SoU-DB-8ke"/>
+                            <constraint firstItem="cwO-NH-oXO" firstAttribute="leading" secondItem="UZ0-TV-tRr" secondAttribute="trailing" constant="18" id="VkU-Z6-cLP"/>
                             <constraint firstItem="SV2-CY-98K" firstAttribute="top" secondItem="8u3-mM-fn2" secondAttribute="bottom" constant="20" id="Xh1-Qf-HKo"/>
+                            <constraint firstItem="g5h-le-ASk" firstAttribute="trailing" secondItem="cwO-NH-oXO" secondAttribute="trailing" constant="-20" id="dKE-kd-Hhj"/>
                             <constraint firstAttribute="bottomMargin" secondItem="AqC-ox-ehc" secondAttribute="bottom" constant="-80" id="eBx-i4-buG"/>
-                            <constraint firstItem="AqC-ox-ehc" firstAttribute="leading" secondItem="2oM-7Y-yiV" secondAttribute="trailing" constant="12" id="mz6-qY-BVX"/>
+                            <constraint firstItem="g5h-le-ASk" firstAttribute="top" secondItem="cwO-NH-oXO" secondAttribute="top" id="gRT-mI-Z23"/>
+                            <constraint firstItem="g5h-le-ASk" firstAttribute="baseline" secondItem="UZ0-TV-tRr" secondAttribute="baseline" id="kyv-NP-mhQ"/>
                             <constraint firstItem="cwO-NH-oXO" firstAttribute="top" secondItem="SV2-CY-98K" secondAttribute="bottom" constant="40" id="nnf-KK-6EO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AqC-ox-ehc" secondAttribute="leading" constant="200" id="p4Y-Xd-pNp"/>
-                            <constraint firstItem="yqS-HC-Qnu" firstAttribute="top" secondItem="2oM-7Y-yiV" secondAttribute="bottom" constant="50" id="pGt-Py-BPN"/>
+                            <constraint firstItem="yqS-HC-Qnu" firstAttribute="top" secondItem="2oM-7Y-yiV" secondAttribute="bottom" constant="30" id="pGt-Py-BPN"/>
+                            <constraint firstItem="SV2-CY-98K" firstAttribute="top" secondItem="8u3-mM-fn2" secondAttribute="bottom" constant="20" id="qVO-vJ-Yph"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="qVO-vJ-Yph"/>
+                                <exclude reference="7HI-ti-vDI"/>
                                 <exclude reference="1Ok-3f-tWQ"/>
                                 <exclude reference="2yr-H2-QHf"/>
+                                <exclude reference="NaF-gc-Pd8"/>
                                 <exclude reference="ShK-lU-q47"/>
+                                <exclude reference="SoU-DB-8ke"/>
+                                <exclude reference="VkU-Z6-cLP"/>
+                                <exclude reference="Mdq-ic-06R"/>
+                                <exclude reference="gRT-mI-Z23"/>
+                                <exclude reference="kyv-NP-mhQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Xh1-Qf-HKo"/>
+                                <include reference="qVO-vJ-Yph"/>
+                                <exclude reference="7HI-ti-vDI"/>
+                                <exclude reference="8Ku-cn-Zkl"/>
+                                <exclude reference="Buj-M0-sjT"/>
+                                <exclude reference="Ige-iS-ppq"/>
+                                <exclude reference="NaF-gc-Pd8"/>
+                                <include reference="SoU-DB-8ke"/>
+                                <include reference="VkU-Z6-cLP"/>
+                                <exclude reference="nnf-KK-6EO"/>
+                                <include reference="Mdq-ic-06R"/>
+                                <exclude reference="SWK-5l-bwi"/>
+                                <exclude reference="dKE-kd-Hhj"/>
+                                <include reference="gRT-mI-Z23"/>
+                                <include reference="kyv-NP-mhQ"/>
                             </mask>
                         </variation>
                     </view>

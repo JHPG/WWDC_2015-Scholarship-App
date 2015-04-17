@@ -26,20 +26,27 @@ class iosSkillsViewController: UIViewController {
         super.viewDidLoad()
         
         animations.motionBackground(postItView)    //Add dynamic animation to background image
-        animations.motionBackground(imgBackground)
         
         postIt = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
-        animations.nextPostIt(postIt, base: postItView)     //Next post-it to present
+        //animations.nextPostIt(postIt, base: postItView)     //Next post-it to present view
     }
     
     @IBAction func Voltar(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func nextButton(sender: AnyObject) {
+        animations.nextPostIt(postIt, base: postItView)     //Previous post-it to present view
+    }
     
+    @IBAction func backButton(sender: AnyObject) {
+        animations.previousPostIt(postIt, base: postItView)     //Next post-it to present view
+    }
+    
+
 
 }

@@ -82,7 +82,19 @@ class Animations: NSObject {
             
             base.addSubview (new)
             
-        }, completion: { finished in
+            }, completion: { finished in
+        })
+    }
+    
+    func previousPostIt (new:UIView, base:UIView){
+        
+        UIView.transitionWithView(new, duration: 0.6, options: UIViewAnimationOptions.TransitionCurlDown, animations: {
+            // remove the front object...
+            //views.frontView.removeFromSuperview()
+            
+            base.addSubview (new)
+            
+            }, completion: { finished in
         })
     }
     
