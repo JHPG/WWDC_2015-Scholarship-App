@@ -11,13 +11,19 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btiOSSkills: UIButton!
+    @IBOutlet weak var btMusic: UIButton!
+    
     var flag: Bool = true
     var animation: Animations = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animation.motionBackground (btiOSSkills)    //Add dynamic animation to button
+        //btiOSSkills.frame.origin.y = 200
+        
+        //Add dynamic animation to button
+        animation.motionBackground (btiOSSkills, qtd:45)
+        animation.motionBackground (btMusic, qtd:42)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,11 +35,23 @@ class ViewController: UIViewController {
         
         if (flag){  //Animate only the first time
             animation.bubble (btiOSSkills)
+            animation.bubble (btMusic)
             //
             flag = false
         }
     }
     
+    @IBAction func btMusic(sender: AnyObject) {
+        
+        var mystoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var new = mystoryboard.instantiateViewControllerWithIdentifier("page") as! iosSkillsViewController
+        //new.titleLabel.text = "ddddd"
+        
+        
+        self.showViewController(new, sender: nil)
+
+        
+    }
     
     
     

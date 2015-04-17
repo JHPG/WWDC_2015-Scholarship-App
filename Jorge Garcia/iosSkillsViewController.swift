@@ -14,10 +14,9 @@ class iosSkillsViewController: UIViewController {
             super.didReceiveMemoryWarning()
     }
     
-    
     @IBOutlet weak var imgBackground: UIImageView!
-    //@IBOutlet weak var desc1: UILabel!
     @IBOutlet weak var postItView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     var postIt:UIView = UIView()
     let animations:Animations = Animations()
@@ -25,7 +24,7 @@ class iosSkillsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animations.motionBackground(postItView)    //Add dynamic animation to background image
+        animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
         
         postIt = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
     }

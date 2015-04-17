@@ -11,17 +11,17 @@ import UIKit
 class Animations: NSObject {
    
     /** Add dynamic animation to background view  */
-    func motionBackground (view: UIView){
+    func motionBackground (view: UIView, qtd: Int){
         
         let horizontalMotionEffect =
                     UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
-        horizontalMotionEffect.minimumRelativeValue = -50
-        horizontalMotionEffect.maximumRelativeValue = 50
+        horizontalMotionEffect.minimumRelativeValue = -qtd
+        horizontalMotionEffect.maximumRelativeValue = qtd
         
         let verticalMotionEffect =
                     UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
-        verticalMotionEffect.minimumRelativeValue = -50
-        verticalMotionEffect.maximumRelativeValue = 50
+        verticalMotionEffect.minimumRelativeValue = -qtd
+        verticalMotionEffect.maximumRelativeValue = qtd
         
         let motionEffectGroup = UIMotionEffectGroup()
         motionEffectGroup.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
@@ -70,6 +70,7 @@ class Animations: NSObject {
         new.backgroundColor = base.backgroundColor          //
         new.layer.cornerRadius = base.layer.cornerRadius    //
         new.frame.origin = CGPoint(x: 0, y: 0)
+        
         base.addSubview (new)
         return new;
     }

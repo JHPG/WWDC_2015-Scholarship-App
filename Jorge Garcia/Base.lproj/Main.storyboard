@@ -9,7 +9,7 @@
         <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="view1" title="Menu" id="BYZ-38-t0r" customClass="ViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="menu" title="Menu" id="BYZ-38-t0r" customClass="ViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,25 +19,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-g4-ijX">
-                                <rect key="frame" x="73" y="98" width="100" height="100"/>
+                                <rect key="frame" x="56" y="98" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="eC6-Cf-JH5"/>
-                                    <constraint firstAttribute="height" constant="100" id="zZQ-5f-ZeW"/>
+                                    <constraint firstAttribute="width" constant="120" id="eC6-Cf-JH5"/>
+                                    <constraint firstAttribute="height" constant="120" id="zZQ-5f-ZeW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="iOS Skills" backgroundImage="bubble">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <state key="normal" title="iOS Skills" backgroundImage="squarePurple"/>
                                 <connections>
                                     <segue destination="yEt-0Y-62Y" kind="show" id="bce-ZK-0gz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-yw-IyK">
+                                <rect key="frame" x="196" y="218" width="115" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="djX-6g-GqP"/>
+                                    <constraint firstAttribute="width" constant="115" id="tfq-TP-Gn3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Music" backgroundImage="squarePink"/>
+                                <connections>
+                                    <action selector="btMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEH-kv-aMp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8o8-g4-ijX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="1ub-5C-WUc"/>
+                            <constraint firstItem="8o8-g4-ijX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="1ub-5C-WUc"/>
+                            <constraint firstItem="tZ8-yw-IyK" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" id="FzU-9j-Q08"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="QQ2-au-nr9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" constant="421" id="YzC-bM-R3V"/>
+                            <constraint firstItem="tZ8-yw-IyK" firstAttribute="leading" secondItem="8o8-g4-ijX" secondAttribute="trailing" constant="20" id="ZWc-9K-gQd"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="pfs-Jw-t7X"/>
                         </constraints>
                         <variation key="default">
@@ -48,6 +60,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="btMusic" destination="tZ8-yw-IyK" id="3h4-AL-84s"/>
                         <outlet property="btiOSSkills" destination="8o8-g4-ijX" id="Oa6-K1-SeF"/>
                     </connections>
                 </viewController>
@@ -58,7 +71,7 @@
         <!--Skills-->
         <scene sceneID="LI4-UX-L14">
             <objects>
-                <viewController title="Skills" id="yEt-0Y-62Y" customClass="iosSkillsViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page" title="Skills" id="yEt-0Y-62Y" customClass="iosSkillsViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8u3-mM-fn2"/>
                         <viewControllerLayoutGuide type="bottom" id="yqS-HC-Qnu"/>
@@ -154,13 +167,13 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qVO-vJ-Yph"/>
-                                <exclude reference="7HI-ti-vDI"/>
                                 <exclude reference="1Ok-3f-tWQ"/>
                                 <exclude reference="2yr-H2-QHf"/>
                                 <exclude reference="NaF-gc-Pd8"/>
                                 <exclude reference="ShK-lU-q47"/>
                                 <exclude reference="SoU-DB-8ke"/>
                                 <exclude reference="VkU-Z6-cLP"/>
+                                <exclude reference="7HI-ti-vDI"/>
                                 <exclude reference="Mdq-ic-06R"/>
                                 <exclude reference="gRT-mI-Z23"/>
                                 <exclude reference="kyv-NP-mhQ"/>
@@ -170,14 +183,14 @@
                             <mask key="constraints">
                                 <exclude reference="Xh1-Qf-HKo"/>
                                 <include reference="qVO-vJ-Yph"/>
-                                <exclude reference="7HI-ti-vDI"/>
-                                <exclude reference="8Ku-cn-Zkl"/>
-                                <exclude reference="Buj-M0-sjT"/>
                                 <exclude reference="Ige-iS-ppq"/>
                                 <exclude reference="NaF-gc-Pd8"/>
                                 <include reference="SoU-DB-8ke"/>
                                 <include reference="VkU-Z6-cLP"/>
                                 <exclude reference="nnf-KK-6EO"/>
+                                <exclude reference="7HI-ti-vDI"/>
+                                <exclude reference="8Ku-cn-Zkl"/>
+                                <exclude reference="Buj-M0-sjT"/>
                                 <include reference="Mdq-ic-06R"/>
                                 <exclude reference="SWK-5l-bwi"/>
                                 <exclude reference="dKE-kd-Hhj"/>
@@ -189,15 +202,17 @@
                     <connections>
                         <outlet property="imgBackground" destination="AqC-ox-ehc" id="Yur-E7-xIc"/>
                         <outlet property="postItView" destination="cwO-NH-oXO" id="nrZ-Et-6Wj"/>
+                        <outlet property="titleLabel" destination="SV2-CY-98K" id="NCP-tP-hfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wog-qZ-XEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="65"/>
+            <point key="canvasLocation" x="322" y="77"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bubble" width="640" height="640"/>
+        <image name="squarePink" width="186" height="183"/>
+        <image name="squarePurple" width="186" height="183"/>
         <image name="xCode_icon" width="1024" height="1024"/>
     </resources>
 </document>
