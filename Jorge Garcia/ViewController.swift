@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                                         titleLabel:"iOS Skills",
                                         backColor:UIColor.purpleColor(),
                                         contents: [UIImage(named: "tent")!,
-                                                   UIImage(named: "tent")!
+                                                   UIImage(named: "bubble")!
                                         ]
         )
         showViewController(view, sender: nil)

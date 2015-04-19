@@ -14,7 +14,6 @@ class PageViewController: UIViewController {
     
     var lbTitle = UILabel()
     var postItView: UIView = UIView()
-    var postIt: UIView = UIView()
     var imgBackground = UIImageView()
     var labelTitle = UILabel()
     var btnBack = UIButton.buttonWithType(UIButtonType.System) as! UIButton
@@ -79,23 +78,19 @@ class PageViewController: UIViewController {
         view.addSubview(postItView)
         
         animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
-        postIt = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
+        
+        var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])    //Define the post-it object to receive a new view
+        contentAtual++
     }
     
     func nextPostIt(){
         
-//        if (postItAtual < contents.count){
-//            var content = UIImageView (image: contents [postItAtual])
-//            content.frame = CGRect(x: 50, y: 50, width: postItView.frame.width-50, height: postItView.frame.height-50)
-//            
-            var postIt2:UIView = UIView()
-            postIt2 = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
+        if (contentAtual < contents.count){
             
-            //postIt.addSubview (content)
-            
-            animations.nextPostIt(postIt, base: postItView)     //Next post-it to present view
+            var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])
+            postIt.addNextPostIt (postItView)     //Next post-it to present view
             contentAtual++
-//        }
+        }
     }
     
     func backPage(sender:UIButton){

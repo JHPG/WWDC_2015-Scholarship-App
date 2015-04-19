@@ -85,6 +85,7 @@
 		D61521321ADE9D1E006772DD /* Jorge Garcia */ = {
 			isa = PBXGroup;
 			children = (
+				D6FDD3321AE4435500303405 /* Content */,
 				D6A963B51AE0287000878FC1 /* Animations.swift */,
 				D6A963B41AE0214C00878FC1 /* Pages */,
 				D61521351ADE9D1E006772DD /* AppDelegate.swift */,
@@ -130,6 +131,13 @@
 				D6A963B71AE1B1DB00878FC1 /* PageViewController.swift */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		D6FDD3321AE4435500303405 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -52,43 +52,5 @@ class Animations: NSObject {
         }, completion: nil)
     }
     
-    func newPostItObject(base: UIView) -> UIView {
-        
-        //Size and color
-        var new = UIView()
-        new.frame = base.frame                              //
-        new.backgroundColor = base.backgroundColor          //
-        new.layer.cornerRadius = base.layer.cornerRadius    //
-        new.frame.origin = CGPoint(x: 0, y: 0)
-        
-        base.addSubview (new)
-        return new;
-    }
-    
-    func nextPostIt (new:UIView, base:UIView){
-        
-        UIView.transitionWithView(new, duration: 0.6, options: UIViewAnimationOptions.TransitionCurlUp, animations: {
-            // remove the front object...
-            //views.frontView.removeFromSuperview()
-            
-            base.addSubview (new)
-            
-            }, completion: { finished in
-        })
-    }
-    
-    func previousPostIt (new:UIView, base:UIView){
-        
-        UIView.transitionWithView(new, duration: 0.6, options: UIViewAnimationOptions.TransitionCurlDown, animations: {
-            // remove the front object...
-            //views.frontView.removeFromSuperview()
-            
-            base.addSubview (new)
-            
-            }, completion: { finished in
-        })
-    }
-    
-    
     
 }
