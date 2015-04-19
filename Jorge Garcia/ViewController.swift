@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         //new.titleLabel.text = "ddddd"
         //self.showViewController(new, sender: nil)
         
-        var view = PageViewController()
+        var view = PageViewController(image: UIImage(named:"xCode_icon"), titleLabel: "iOS Skills")
         showViewController(view, sender: nil)
         
         
