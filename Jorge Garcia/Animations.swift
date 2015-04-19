@@ -53,16 +53,6 @@ class Animations: NSObject {
     }
     
     func newPostItObject(base: UIView) -> UIView {
-        //Base config
-        base.layer.shadowColor = UIColor.blackColor().CGColor
-        base.layer.shadowOffset = CGSizeMake(4, 4)
-        base.layer.shadowOpacity = 0.8
-        base.layer.shadowRadius = 5
-        base.layer.cornerRadius = 30
-        //base.layer.borderWidth = 1
-        //base.frame.or
-        
-        var temp:NSCoding
         
         //Size and color
         var new = UIView()

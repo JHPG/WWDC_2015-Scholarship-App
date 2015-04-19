@@ -48,12 +48,16 @@ class ViewController: UIViewController {
         //new.titleLabel.text = "ddddd"
         //self.showViewController(new, sender: nil)
         
-        var view = PageViewController(image: UIImage(named:"xCode_icon"), titleLabel: "iOS Skills")
+        var view = PageViewController(  image:UIImage(named:"xCode_icon"),
+                                        titleLabel:"iOS Skills",
+                                        backColor:UIColor.purpleColor(),
+                                        contents: [UIImage(named: "tent")!,
+                                                   UIImage(named: "tent")!
+                                        ]
+        )
         showViewController(view, sender: nil)
         
-        
-        
-        
+
         
     }
     

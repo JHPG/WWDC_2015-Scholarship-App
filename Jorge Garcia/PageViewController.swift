@@ -18,14 +18,18 @@ class PageViewController: UIViewController {
     var imgBackground = UIImageView()
     var labelTitle = UILabel()
     var btnBack = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+    var contents = [UIImage]()
+    var contentAtual:Int = 0
     
     let animations:Animations = Animations()
     
-    convenience init(image:UIImage!, titleLabel:String) {
+    convenience init(image:UIImage!, titleLabel:String, backColor:UIColor, contents: Array<UIImage>) {
         self.init()
         
         labelTitle.text = titleLabel
         imgBackground.image = image
+        postItView.backgroundColor = backColor
+        self.contents = contents
         
     }
     
@@ -36,6 +40,8 @@ class PageViewController: UIViewController {
         let viewHeight = view.bounds.height
         let viewWidth = view.bounds.width
         view.backgroundColor = UIColor.whiteColor()
+        
+        view.userInteractionEnabled = true
         
         //Fundo
         let imgPos = CGRect(x: viewWidth-200, y: viewHeight-360, width:450, height:418) //Trocar depois (x=0,y=0)
@@ -64,15 +70,40 @@ class PageViewController: UIViewController {
                                    y:labelTitle.viewForBaselineLayout()!.frame.origin.y+100,
                                    width: 250, height: 300)
         postItView.center = self.view.center;
-        postItView.backgroundColor = UIColor.purpleColor()
+        //postItView.backgroundColor = UIColor.purpleColor()
+        postItView.layer.shadowColor = UIColor.blackColor().CGColor
+        postItView.layer.shadowOffset = CGSizeMake(4, 4)
+        postItView.layer.shadowOpacity = 0.8
+        postItView.layer.shadowRadius = 5
+        postItView.layer.cornerRadius = 30
         view.addSubview(postItView)
         
         animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
         postIt = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
     }
     
+    func nextPostIt(){
+        
+//        if (postItAtual < contents.count){
+//            var content = UIImageView (image: contents [postItAtual])
+//            content.frame = CGRect(x: 50, y: 50, width: postItView.frame.width-50, height: postItView.frame.height-50)
+//            
+            var postIt2:UIView = UIView()
+            postIt2 = animations.newPostItObject (postItView)    //Define the post-it object to receive a new view
+            
+            //postIt.addSubview (content)
+            
+            animations.nextPostIt(postIt, base: postItView)     //Next post-it to present view
+            contentAtual++
+//        }
+    }
+    
     func backPage(sender:UIButton){
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        nextPostIt()
     }
 
 }
