@@ -1,5 +1,5 @@
 //
-//  iosSkillsViewController.swift
+//  SkillsViewController.swift
 //  Jorge Garcia
 //
 //  Created by Jorge Henrique P. Garcia on 4/16/15.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class iosSkillsViewController: UIViewController {
+class SkillsViewController: UIViewController {
     
     override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
     
     @IBOutlet weak var imgBackground: UIImageView!
     @IBOutlet weak var postItView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var contents = [UIImage]()
+    var contentAtual:Int = 0
     
     let animations:Animations = Animations()
     
@@ -24,6 +27,7 @@ class iosSkillsViewController: UIViewController {
         animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
         
         var postIt:PostIt = PostIt(base: postItView, newContent: UIImage(named: "bubble")!)    //Define the post-it object to receive a new view
+        contentAtual++
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
@@ -38,11 +42,13 @@ class iosSkillsViewController: UIViewController {
     @IBAction func nextButton(sender: AnyObject) {
         var postIt:PostIt = PostIt(base: postItView, newContent: UIImage(named: "bubble")!)    //Define the post-it object to receive a new view
         postIt.addNextPostIt (postItView)     //Previous post-it to present view
+        contentAtual++
     }
     
     @IBAction func backButton(sender: AnyObject) {
         var postIt:PostIt = PostIt(base: postItView, newContent: UIImage(named: "bubble")!)    //Define the post-it object to receive a new view
         postIt.addPreviousPostIt (postItView)     //Next post-it to present view
+        contentAtual--
     }
     
 

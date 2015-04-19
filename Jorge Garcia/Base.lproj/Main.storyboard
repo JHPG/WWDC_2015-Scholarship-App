@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -25,9 +25,9 @@
                                     <constraint firstAttribute="height" constant="120" id="zZQ-5f-ZeW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="iOS Skills" backgroundImage="squarePurple"/>
+                                <state key="normal" title="Dev Skills" backgroundImage="squarePurple"/>
                                 <connections>
-                                    <segue destination="yEt-0Y-62Y" kind="show" id="bce-ZK-0gz"/>
+                                    <action selector="btiOS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hhO-Ba-EgC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-yw-IyK">
@@ -37,7 +37,9 @@
                                     <constraint firstAttribute="width" constant="115" id="tfq-TP-Gn3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                <state key="normal" title="Music" backgroundImage="squarePink"/>
+                                <state key="normal" title="Hobbies" backgroundImage="squareCyan">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="btMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEH-kv-aMp"/>
                                 </connections>
@@ -62,6 +64,7 @@
                     <connections>
                         <outlet property="btMusic" destination="tZ8-yw-IyK" id="3h4-AL-84s"/>
                         <outlet property="btiOSSkills" destination="8o8-g4-ijX" id="Oa6-K1-SeF"/>
+                        <segue destination="yEt-0Y-62Y" kind="show" identifier="detailSegue" id="XQi-nj-PIf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,7 +74,7 @@
         <!--Skills-->
         <scene sceneID="LI4-UX-L14">
             <objects>
-                <viewController storyboardIdentifier="page" title="Skills" id="yEt-0Y-62Y" customClass="iosSkillsViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page" title="Skills" id="yEt-0Y-62Y" customClass="SkillsViewController" customModule="Jorge_Garcia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8u3-mM-fn2"/>
                         <viewControllerLayoutGuide type="bottom" id="yqS-HC-Qnu"/>
@@ -211,7 +214,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="squarePink" width="186" height="183"/>
+        <image name="squareCyan" width="400" height="394"/>
         <image name="squarePurple" width="186" height="183"/>
         <image name="xCode_icon" width="1024" height="1024"/>
     </resources>

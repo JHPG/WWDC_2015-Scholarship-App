@@ -9,8 +9,6 @@
 import UIKit
 
 class PageViewController: UIViewController {
-
-
     
     var lbTitle = UILabel()
     var postItView: UIView = UIView()
@@ -29,7 +27,6 @@ class PageViewController: UIViewController {
         imgBackground.image = image
         postItView.backgroundColor = backColor
         self.contents = contents
-        
     }
     
     
@@ -86,7 +83,6 @@ class PageViewController: UIViewController {
     func nextPostIt(){
         
         if (contentAtual < contents.count){
-            
             var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])
             postIt.addNextPostIt (postItView)     //Next post-it to present view
             contentAtual++

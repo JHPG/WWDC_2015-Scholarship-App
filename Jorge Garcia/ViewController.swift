@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     var flag: Bool = true
     var animation: Animations = Animations()
+    var btn: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,42 +41,53 @@ class ViewController: UIViewController {
             flag = false
         }
     }
-    
-    @IBAction func btMusic(sender: AnyObject) {
-        
-        //var mystoryboard = UIStoryboard(name: "Main", bundle: nil)
-        //var new = mystoryboard.instantiateViewControllerWithIdentifier("page") as! iosSkillsViewController
-        //new.titleLabel.text = "ddddd"
-        //self.showViewController(new, sender: nil)
+    @IBAction func btiOS(sender: AnyObject) {
+//        self.performSegueWithIdentifier("detailSegue", sender: sender)
+//        btn = "ios"
         
         var view = PageViewController(  image:UIImage(named:"xCode_icon"),
-                                        titleLabel:"iOS Skills",
-                                        backColor:UIColor.purpleColor(),
-                                        contents: [UIImage(named: "tent")!,
-                                                   UIImage(named: "bubble")!
-                                        ]
-        )
+            titleLabel:"Developer Skills",
+            backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
+            contents: [UIImage(named: "ios")!,
+                UIImage(named: "java")!,
+                UIImage(named: "web")!,
+                UIImage(named: "dotNet")!
+            ])
         showViewController(view, sender: nil)
-        
-
         
     }
     
+    @IBAction func btMusic(sender: AnyObject) {
+        
+        var view = PageViewController(  image:UIImage(named:"tent"),
+            titleLabel:"Hobbies",
+            backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
+            
+            contents: [UIImage(named: "Skills_mapkit")!
+            ])
+        showViewController(view, sender: nil)
+        
+    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        
+//        if(btn == btn){
+//            var view = SkillsViewController();
+//            
+//            view.imgBackground.image = UIImage(named:"xCode_icon")
+//            view.titleLabel.text = "iOS Skills"
+//            view.view.backgroundColor = UIColor(red: 205/255, green: 20/255, blue: 100/255, alpha: 1)
+//            view.contents = [UIImage(named: "Skills_mapkit")!,
+//                UIImage(named: "bubble")!
+//            ]
+//
+//        }
+//    }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  
     
 }
+
+
 

@@ -23,14 +23,15 @@ class PostIt: UIView {
         self.frame.origin = CGPoint(x: 0, y: 0)
         
         content.image = newContent
-        content.frame = CGRect(x: 20, y: 20, width: self.frame.width-40, height: self.frame.height-40)
+        content.frame = CGRect(x: 20, y: 20, width: self.frame.width-65, height: self.frame.height-40)
+        content.center = self.center
+        content.autoresizingMask = UIViewAutoresizing()
         self.addSubview(content)
         
         base.addSubview (self)
     }
     
     override func drawRect(rect: CGRect) {
-        
         
     }
     

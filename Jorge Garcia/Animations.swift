@@ -44,11 +44,9 @@ class Animations: NSObject {
     func bubble (el: UIView){
         el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.height)
         
-        UIView.animateWithDuration(1, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-            
-        el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.frame.origin.x)
-        
-        //self.view.layoutIfNeeded()
+        UIView.animateWithDuration(1, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.frame.origin.x)
+            //self.view.layoutIfNeeded()
         }, completion: nil)
     }
     
