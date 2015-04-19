@@ -43,13 +43,17 @@ class ViewController: UIViewController {
     
     @IBAction func btMusic(sender: AnyObject) {
         
-        var mystoryboard = UIStoryboard(name: "Main", bundle: nil)
-        var new = mystoryboard.instantiateViewControllerWithIdentifier("page") as! iosSkillsViewController
+        //var mystoryboard = UIStoryboard(name: "Main", bundle: nil)
+        //var new = mystoryboard.instantiateViewControllerWithIdentifier("page") as! iosSkillsViewController
         //new.titleLabel.text = "ddddd"
+        //self.showViewController(new, sender: nil)
+        
+        var view = PageViewController()
+        showViewController(view, sender: nil)
         
         
-        self.showViewController(new, sender: nil)
-
+        
+        
         
     }
     

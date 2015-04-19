@@ -10,9 +10,7 @@ import UIKit
 
 class iosSkillsViewController: UIViewController {
     
-    override func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-    }
+    override func didReceiveMemoryWarning() { super.didReceiveMemoryWarning() }
     
     @IBOutlet weak var imgBackground: UIImageView!
     @IBOutlet weak var postItView: UIView!

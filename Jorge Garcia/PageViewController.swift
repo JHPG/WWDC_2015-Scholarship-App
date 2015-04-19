@@ -10,32 +10,53 @@ import UIKit
 
 class PageViewController: UIViewController {
 
+
+    
+    var lbTitle = UILabel()
+    var postItView: UIView = UIView()
+    var postIt: UIView = UIView()
+    var imgBackground = UIImageView()
+    var labelTitle = UILabel()
+    var btnBack = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+    
+    let animations:Animations = Animations()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let viewHeight = view.bounds.height
         let viewWidth = view.bounds.width
-
-        var lbTitle = UILabel()
-        let imgPos = CGRect(x: viewWidth-200, y: viewHeight+80, width:450, height:418) //Trocar depois
-        var imgBackground: UIImageView = UIImageView(frame: imgPos)
-        var postItView: UIView = UIView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        view.backgroundColor = UIColor.whiteColor()
+        
+        //Fundo
+        let imgPos = CGRect(x: viewWidth-200, y: viewHeight-360, width:450, height:418) //Trocar depois
+        imgBackground.frame = imgPos
+        imgBackground.image = UIImage(named: "xCode_icon")  //trocar
+        view.addSubview(imgBackground)
+        
+        //LabelTitle
+        labelTitle.text = "iOS Skills"
+        labelTitle.frame = CGRect(x:20, y:20, width:300, height:100) //Trocar depois
+        labelTitle.textColor = UIColor.blackColor()
+        labelTitle.font = UIFont(name: "AvenirNext-DemiBold", size: 33)
+        view.addSubview(labelTitle)
+        
+        //btnBack
+        let btnBackPos = CGRect(x:20, y: viewHeight-80, width:70, height:50) //Trocar depois
+        btnBack.frame = btnBackPos
+        btnBack.setTitle("Menu", forState: UIControlState.Normal)
+        btnBack.titleLabel!.font = UIFont(name: "Superclarendon", size: 22)
+        //btnBack.backgroundColor = UIColor.redColor()
+        btnBack.addTarget(self, action: "backPage:", forControlEvents: UIControlEvents.TouchUpInside)
+        view.addSubview(btnBack)
+        
+        //Post-it
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func backPage(sender:UIButton){
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
 
 }
