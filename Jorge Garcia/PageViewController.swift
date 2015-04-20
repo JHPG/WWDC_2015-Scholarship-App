@@ -36,8 +36,7 @@ class PageViewController: UIViewController {
         let viewHeight = view.bounds.height
         let viewWidth = view.bounds.width
         view.backgroundColor = UIColor.whiteColor()
-        
-        view.userInteractionEnabled = true
+        //view.userInteractionEnabled = true
         
         //Fundo
         let imgPos = CGRect(x: viewWidth-200, y: viewHeight-360, width:450, height:418) //Trocar depois (x=0,y=0)
@@ -67,11 +66,14 @@ class PageViewController: UIViewController {
                                    width: 250, height: 300)
         postItView.center = self.view.center;
         //postItView.backgroundColor = UIColor.purpleColor()
+        
+        postItView.layer.cornerRadius = 30
+        //postItView.clipsToBounds = false
         postItView.layer.shadowColor = UIColor.blackColor().CGColor
         postItView.layer.shadowOffset = CGSizeMake(4, 4)
         postItView.layer.shadowOpacity = 0.8
         postItView.layer.shadowRadius = 5
-        postItView.layer.cornerRadius = 30
+
         view.addSubview(postItView)
         
         animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image

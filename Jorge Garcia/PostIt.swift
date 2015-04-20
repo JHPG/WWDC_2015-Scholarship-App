@@ -17,15 +17,17 @@ class PostIt: UIView {
     convenience init(base:UIView, newContent:UIImage) {
         self.init()
         
-        self.frame = base.frame                              //
+        self.frame = CGRect(x:0, y:0, width:base.frame.width, height:base.frame.height)
+        //self.center = base.center
         self.backgroundColor = base.backgroundColor          //
         self.layer.cornerRadius = base.layer.cornerRadius    //
-        self.frame.origin = CGPoint(x: 0, y: 0)
+        self.clipsToBounds = true
         
         content.image = newContent
         content.frame = CGRect(x: 20, y: 20, width: self.frame.width-65, height: self.frame.height-40)
         content.center = self.center
         content.autoresizingMask = UIViewAutoresizing()
+        
         self.addSubview(content)
         
         base.addSubview (self)

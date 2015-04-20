@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOrange: UIButton!
     @IBOutlet weak var btnCyan: UIButton!
     @IBOutlet weak var btnBlue: UIButton!
-    
+    @IBOutlet weak var foto: UIImageView!
     
     var flag: Bool = true
     var animation: Animations = Animations()
@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         animation.motionBackground (btnCyan, qtd:42)
         animation.motionBackground (btnOrange, qtd:45)
         animation.motionBackground (btnBlue, qtd:48)
+        
+        foto.layer.borderWidth = 1
+        foto.layer.cornerRadius = 40
+        foto.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {

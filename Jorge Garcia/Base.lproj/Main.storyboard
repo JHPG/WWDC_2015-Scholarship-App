@@ -73,32 +73,32 @@
                                     <action selector="btBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rh-mR-maO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc3" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-1N-Vuz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc2" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-1N-Vuz">
                                 <rect key="frame" x="-4" y="20" width="608" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="goC-uL-FWM"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xCode_icon" translatesAutoresizingMaskIntoConstraints="NO" id="2Jj-Oy-Tip">
-                                <rect key="frame" x="260" y="40" width="80" height="80"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wwdc2" translatesAutoresizingMaskIntoConstraints="NO" id="2Jj-Oy-Tip">
+                                <rect key="frame" x="260" y="50" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Q2L-F9-8e6"/>
                                     <constraint firstAttribute="height" constant="80" id="kz6-e6-GMc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS Developer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a22-Rg-mCZ">
-                                <rect key="frame" x="246" y="169" width="109" height="23"/>
+                                <rect key="frame" x="246" y="182" width="110" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBoldItalic" family="Avenir Next" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="shadowOffset" width="2" height="2"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jorge Henrique P. Garcia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRA-h8-Q6J">
-                                <rect key="frame" x="135" y="128" width="331" height="34"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                                <rect key="frame" x="150" y="140" width="301" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
@@ -107,7 +107,7 @@
                         <constraints>
                             <constraint firstItem="gTs-1N-Vuz" firstAttribute="centerX" secondItem="2Jj-Oy-Tip" secondAttribute="centerX" id="1Rn-uW-1hk"/>
                             <constraint firstItem="tZ8-yw-IyK" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" constant="-42" id="BID-ai-egg"/>
-                            <constraint firstItem="gTs-1N-Vuz" firstAttribute="top" secondItem="2Jj-Oy-Tip" secondAttribute="top" constant="-20" id="CpB-gR-xt3"/>
+                            <constraint firstItem="gTs-1N-Vuz" firstAttribute="top" secondItem="2Jj-Oy-Tip" secondAttribute="top" constant="-30" id="CpB-gR-xt3"/>
                             <constraint firstItem="dRA-h8-Q6J" firstAttribute="top" secondItem="2Jj-Oy-Tip" secondAttribute="bottom" constant="10" id="G5U-f7-6r7"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="HtH-0l-4js"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="height" secondItem="Qhi-Q0-ub1" secondAttribute="height" id="IR7-Fm-QNI"/>
@@ -153,6 +153,7 @@
                         <outlet property="btnBlue" destination="A9p-Gm-pIs" id="r7c-sr-bQl"/>
                         <outlet property="btnCyan" destination="tZ8-yw-IyK" id="AJT-XH-1wR"/>
                         <outlet property="btnOrange" destination="Qhi-Q0-ub1" id="Dys-Ac-Cll"/>
+                        <outlet property="foto" destination="2Jj-Oy-Tip" id="xX1-aX-tHh"/>
                         <segue destination="yEt-0Y-62Y" kind="show" identifier="detailSegue" id="XQi-nj-PIf"/>
                     </connections>
                 </viewController>
@@ -307,7 +308,7 @@
         <image name="squareCyan" width="400" height="394"/>
         <image name="squareOrange" width="400" height="394"/>
         <image name="squarePurple" width="186" height="183"/>
-        <image name="wwdc3" width="444" height="250"/>
+        <image name="wwdc2" width="444" height="250"/>
         <image name="xCode_icon" width="1024" height="1024"/>
     </resources>
 </document>
