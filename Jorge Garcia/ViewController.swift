@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var btiOSSkills: UIButton!
-    @IBOutlet weak var btMusic: UIButton!
+    @IBOutlet weak var btnOrange: UIButton!
+    @IBOutlet weak var btnCyan: UIButton!
+    @IBOutlet weak var btnBlue: UIButton!
+    
     
     var flag: Bool = true
     var animation: Animations = Animations()
@@ -23,8 +26,10 @@ class ViewController: UIViewController {
         //btiOSSkills.frame.origin.y = 200
         
         //Add dynamic animation to button
-        animation.motionBackground (btiOSSkills, qtd:45)
-        animation.motionBackground (btMusic, qtd:42)
+        animation.motionBackground (btiOSSkills, qtd:40)
+        animation.motionBackground (btnCyan, qtd:42)
+        animation.motionBackground (btnOrange, qtd:45)
+        animation.motionBackground (btnBlue, qtd:48)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,11 +41,15 @@ class ViewController: UIViewController {
         
         if (flag){  //Animate only the first time
             animation.bubble (btiOSSkills)
-            animation.bubble (btMusic)
+            animation.bubble (btnOrange)
+            animation.bubble (btnBlue)
+            animation.bubble (btnCyan)
             //
             flag = false
         }
     }
+    
+    
     @IBAction func btiOS(sender: AnyObject) {
 //        self.performSegueWithIdentifier("detailSegue", sender: sender)
 //        btn = "ios"
@@ -57,17 +66,26 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func btMusic(sender: AnyObject) {
+    
+    @IBAction func btCyan(sender: AnyObject) {
         
-        var view = PageViewController(  image:UIImage(named:"tent"),
+        var view = PageViewController(  image:UIImage(named:"xCode_icon"),
             titleLabel:"Hobbies",
             backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
             
-            contents: [UIImage(named: "Skills_mapkit")!
+            contents: [UIImage(named: "web")!
+                
             ])
         showViewController(view, sender: nil)
-        
     }
+    
+    
+    
+    
+    
+    
+    
+    
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        

@@ -86,6 +86,9 @@ class PageViewController: UIViewController {
             var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])
             postIt.addNextPostIt (postItView)     //Next post-it to present view
             contentAtual++
+            if(contentAtual >= contents.count){
+                contentAtual=0
+            }
         }
     }
     
