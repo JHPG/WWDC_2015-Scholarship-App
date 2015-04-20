@@ -66,7 +66,6 @@ class ViewController: UIViewController {
         
     }
     
-    
     @IBAction func btCyan(sender: AnyObject) {
         
         var view = PageViewController(  image:UIImage(named:"xCode_icon"),
@@ -79,7 +78,11 @@ class ViewController: UIViewController {
         showViewController(view, sender: nil)
     }
     
+    @IBAction func btOrange(sender: AnyObject) {
+    }
     
+    @IBAction func btBlue(sender: AnyObject) {
+    }
     
     
     
