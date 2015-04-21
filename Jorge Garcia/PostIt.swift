@@ -13,6 +13,7 @@ class PostIt: UIView {
     let animations = Animations()
     var content = UIImageView()
     var base:UIView!
+    var detail:String = ""
     
     convenience init(base:UIView, newContent:UIImage) {
         self.init()

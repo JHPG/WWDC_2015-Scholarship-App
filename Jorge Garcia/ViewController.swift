@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         animation.motionBackground (btnBlue, qtd:48)
         
         foto.layer.borderWidth = 1
-        foto.layer.cornerRadius = 40
+        foto.layer.cornerRadius = foto.frame.size.width/2   //Photo in circle frame
         foto.clipsToBounds = true
     }
 
@@ -58,9 +58,10 @@ class ViewController: UIViewController {
 //        self.performSegueWithIdentifier("detailSegue", sender: sender)
 //        btn = "ios"
         
-        var view = PageViewController(  image:UIImage(named:"xCode_icon"),
+        var view = PageViewController(  image:UIImage(named:"xcode"),
             titleLabel:"Developer Skills",
-            backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
+            //backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
+            backColor:UIColor(red: 230/255, green: 126/255, blue:34/255, alpha: 1),
             contents: [UIImage(named: "ios")!,
                 UIImage(named: "java")!,
                 UIImage(named: "web")!,
@@ -72,20 +73,42 @@ class ViewController: UIViewController {
     
     @IBAction func btCyan(sender: AnyObject) {
         
-        var view = PageViewController(  image:UIImage(named:"xCode_icon"),
+        var view = PageViewController(  image:UIImage(named:"garageBand"),
             titleLabel:"Hobbies",
-            backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
+            //backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
+            backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
             
-            contents: [UIImage(named: "web")!
-                
+            contents: [UIImage(named: "guitar")!,
+                UIImage(named: "games")!,
+                UIImage(named: "reading")!,
+                UIImage(named: "swimming")!
             ])
         showViewController(view, sender: nil)
     }
     
     @IBAction func btOrange(sender: AnyObject) {
+        
+        var view = PageViewController(  image:UIImage(named:"itunesU"),
+            titleLabel:"Academic",
+            //backColor:UIColor(red: 230/255, green: 126/255, blue:34/255, alpha: 1),
+            backColor:UIColor(red: 52/255, green: 152/255, blue:219/255, alpha: 1),
+            
+            contents: [UIImage(named: "highSchool2")!,
+                UIImage(named: "college")!
+            ])
+        showViewController(view, sender: nil)
     }
     
     @IBAction func btBlue(sender: AnyObject) {
+        
+        var view = PageViewController (image:UIImage(named:"work"),
+            titleLabel:"Professional",
+            //backColor:UIColor(red: 52/255, green: 152/255, blue:219/255, alpha: 1),
+            backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
+            contents: [UIImage(named: "ios")!
+                
+            ])
+        showViewController(view, sender: nil)
     }
     
     

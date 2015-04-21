@@ -17,6 +17,7 @@ class PageViewController: UIViewController {
     var btnBack = UIButton.buttonWithType(UIButtonType.System) as! UIButton
     var contents = [UIImage]()
     var contentAtual:Int = 0
+    var detailLabel = UILabel() //Nova
     
     let animations:Animations = Animations()
     
@@ -27,6 +28,7 @@ class PageViewController: UIViewController {
         imgBackground.image = image
         postItView.backgroundColor = backColor
         self.contents = contents
+        detailLabel.text = ""
     }
     
     
@@ -60,21 +62,25 @@ class PageViewController: UIViewController {
         btnBack.addTarget(self, action: "backPage:", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(btnBack)
         
+        //Detail label
+        detailLabel.frame = CGRect(x: self.view.center.x, y: viewHeight-150, width: 100, height: 100)
+        detailLabel.center.x = view.center.x
+        detailLabel.font = UIFont(name: "Avenir", size: 25)
+        detailLabel.autoresizingMask = UIViewAutoresizing()
+        view.addSubview(detailLabel)
+        
         //Post-it
-        postItView.frame = CGRect( x:0,
-                                   y:labelTitle.viewForBaselineLayout()!.frame.origin.y+100,
+        postItView.frame = CGRect( x:0, y:labelTitle.viewForBaselineLayout()!.frame.origin.y+100,
                                    width: 250, height: 300)
         postItView.center = self.view.center;
-        //postItView.backgroundColor = UIColor.purpleColor()
-        
         postItView.layer.cornerRadius = 30
         //postItView.clipsToBounds = false
         postItView.layer.shadowColor = UIColor.blackColor().CGColor
         postItView.layer.shadowOffset = CGSizeMake(4, 4)
         postItView.layer.shadowOpacity = 0.8
         postItView.layer.shadowRadius = 5
-
         view.addSubview(postItView)
+        
         
         animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
         
@@ -85,8 +91,11 @@ class PageViewController: UIViewController {
     func nextPostIt(){
         
         if (contentAtual < contents.count){
+            
             var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])
             postIt.addNextPostIt (postItView)     //Next post-it to present view
+            detailLabel.text = postIt.detail
+            
             contentAtual++
             if(contentAtual >= contents.count){
                 contentAtual=0
