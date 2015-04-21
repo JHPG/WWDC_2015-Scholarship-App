@@ -35,6 +35,16 @@ class PageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        drawView()
+        
+        animations.motionBackground(imgBackground, qtd: 40)    //Add dynamic animation to background image
+        
+        var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])    //Define the post-it object to receive a new view
+        contentAtual++
+    }
+    
+    func drawView(){
+        
         let viewHeight = view.bounds.height
         let viewWidth = view.bounds.width
         view.backgroundColor = UIColor.whiteColor()
@@ -47,8 +57,7 @@ class PageViewController: UIViewController {
         view.addSubview(imgBackground)
         
         //LabelTitle
-        //labelTitle.text = "iOS Skills"
-        labelTitle.frame = CGRect(x:20, y:20, width:300, height:100) //Trocar depois
+        labelTitle.frame = CGRect(x:20, y:50, width:300, height:100) //Trocar depois
         labelTitle.textColor = UIColor.blackColor()
         labelTitle.font = UIFont(name: "AvenirNext-DemiBold", size: 33)
         view.addSubview(labelTitle)
@@ -70,8 +79,8 @@ class PageViewController: UIViewController {
         view.addSubview(detailLabel)
         
         //Post-it
-        postItView.frame = CGRect( x:0, y:labelTitle.viewForBaselineLayout()!.frame.origin.y+100,
-                                   width: 250, height: 300)
+        postItView.frame = CGRect( x:0, y:labelTitle.viewForBaselineLayout()!.frame.origin.y+30,
+            width: 250, height: 300)
         postItView.center = self.view.center;
         postItView.layer.cornerRadius = 30
         //postItView.clipsToBounds = false
@@ -80,12 +89,11 @@ class PageViewController: UIViewController {
         postItView.layer.shadowOpacity = 0.8
         postItView.layer.shadowRadius = 5
         view.addSubview(postItView)
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        drawView()
         
-        
-        animations.motionBackground(postItView, qtd: 40)    //Add dynamic animation to background image
-        
-        var postIt:PostIt = PostIt(base: postItView, newContent: contents[contentAtual])    //Define the post-it object to receive a new view
-        contentAtual++
     }
     
     func nextPostIt(){
