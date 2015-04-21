@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var btiOSSkills: UIButton!
     @IBOutlet weak var btnOrange: UIButton!
     @IBOutlet weak var btnCyan: UIButton!
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     
     var flag: Bool = true
     var animation: Animations = Animations()
-    var btn: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
 //        btn = "ios"
         
         var view = PageViewController(  image:UIImage(named:"xcode"),
-            titleLabel:"Developer Skills",
+            titleLabel:"Dev Skills",
             //backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
             backColor:UIColor(red: 230/255, green: 126/255, blue:34/255, alpha: 1),
             contents: [UIImage(named: "ios")!,

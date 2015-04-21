@@ -17,7 +17,7 @@ class PageViewController: UIViewController {
     var btnBack = UIButton.buttonWithType(UIButtonType.System) as! UIButton
     var contents = [UIImage]()
     var contentAtual:Int = 0
-    var detailLabel = UILabel() //Nova
+    var detailLabel = UILabel()
     
     let animations:Animations = Animations()
     
@@ -53,17 +53,16 @@ class PageViewController: UIViewController {
         //Fundo
         let imgPos = CGRect(x: viewWidth-200, y: viewHeight-360, width:450, height:418) //Trocar depois (x=0,y=0)
         imgBackground.frame = imgPos
-        //imgBackground.image = UIImage(named: "xCode_icon")  //trocar
         view.addSubview(imgBackground)
         
         //LabelTitle
-        labelTitle.frame = CGRect(x:20, y:50, width:300, height:100) //Trocar depois
+        labelTitle.frame = CGRect(x:20, y:50, width:300, height:100)
         labelTitle.textColor = UIColor.blackColor()
         labelTitle.font = UIFont(name: "AvenirNext-DemiBold", size: 33)
         view.addSubview(labelTitle)
         
         //btnBack
-        let btnBackPos = CGRect(x:20, y: viewHeight-100, width:100, height:100) //Trocar depois
+        let btnBackPos = CGRect(x:20, y: viewHeight-100, width:100, height:100)
         btnBack.autoresizingMask = UIViewAutoresizing()
         btnBack.frame = btnBackPos
         btnBack.setTitle("Menu", forState: UIControlState.Normal)
@@ -72,10 +71,12 @@ class PageViewController: UIViewController {
         view.addSubview(btnBack)
         
         //Detail label
-        detailLabel.frame = CGRect(x: self.view.center.x, y: viewHeight-150, width: 100, height: 100)
-        detailLabel.center.x = view.center.x
-        detailLabel.font = UIFont(name: "Avenir", size: 25)
-        detailLabel.autoresizingMask = UIViewAutoresizing()
+        detailLabel.frame = CGRect(x: 65, y: viewHeight-140, width: 200, height: 80)
+        detailLabel.numberOfLines = 2
+        detailLabel.text = "Touch anywhere to \n switch to next card"
+        detailLabel.font = UIFont(name: "AvenirNext-Italic", size: 14)
+        //detailLabel.autoresizingMask = UIViewAutoresizing()
+        
         view.addSubview(detailLabel)
         
         //Post-it

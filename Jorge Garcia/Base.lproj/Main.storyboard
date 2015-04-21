@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-g4-ijX">
-                                <rect key="frame" x="180" y="240" width="120" height="120"/>
+                                <rect key="frame" x="190" y="230" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="TFi-FV-emu"/>
                                     <constraint firstAttribute="height" constant="120" id="Yqe-Ri-Wcz"/>
@@ -59,7 +59,7 @@
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Gm-pIs">
-                                <rect key="frame" x="320" y="441" width="140" height="140"/>
+                                <rect key="frame" x="330" y="431" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="9Zu-OX-zmL"/>
                                     <constraint firstAttribute="width" constant="140" id="Vby-eP-2OQ"/>
@@ -93,7 +93,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-yw-IyK">
-                                <rect key="frame" x="345" y="318" width="115" height="115"/>
+                                <rect key="frame" x="355" y="308" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="djX-6g-GqP"/>
                                     <constraint firstAttribute="width" constant="115" id="tfq-TP-Gn3"/>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-Q0-ub1">
-                                <rect key="frame" x="175" y="370" width="130" height="130"/>
+                                <rect key="frame" x="185" y="360" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="hkw-vp-F4T"/>
                                     <constraint firstAttribute="height" constant="130" id="iTH-Lb-rVN"/>
@@ -151,7 +151,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" constant="421" id="YzC-bM-R3V"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9p-Gm-pIs" secondAttribute="bottom" constant="124" id="a35-zl-mJc"/>
                             <constraint firstItem="gTs-1N-Vuz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="abO-Ht-ZIP"/>
-                            <constraint firstItem="Qhi-Q0-ub1" firstAttribute="leading" secondItem="A9p-Gm-pIs" secondAttribute="leading" constant="-137" id="d00-3c-mcH"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="centerX" secondItem="Qhi-Q0-ub1" secondAttribute="centerX" priority="900" id="fLT-6B-AXj">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
@@ -178,47 +177,45 @@
                                 <exclude reference="abO-Ht-ZIP"/>
                                 <exclude reference="kZ4-qB-xLj"/>
                                 <exclude reference="qXQ-vD-fl5"/>
+                                <exclude reference="XT3-cy-LoK"/>
                                 <exclude reference="BbO-C2-OmK"/>
                                 <exclude reference="IR7-Fm-QNI"/>
                                 <exclude reference="QQ2-au-nr9"/>
                                 <exclude reference="ouq-aZ-VtB"/>
                                 <exclude reference="tQZ-l5-i41"/>
-                                <exclude reference="XT3-cy-LoK"/>
+                                <exclude reference="DEb-qC-n0g"/>
+                                <exclude reference="tgZ-PM-PVw"/>
+                                <exclude reference="usQ-QS-rLw"/>
                                 <exclude reference="8D0-FV-cvb"/>
                                 <exclude reference="9wb-yl-9a7"/>
                                 <exclude reference="Hu0-nt-Xra"/>
                                 <exclude reference="X2o-bX-Ise"/>
-                                <exclude reference="DEb-qC-n0g"/>
-                                <exclude reference="d00-3c-mcH"/>
-                                <exclude reference="tgZ-PM-PVw"/>
-                                <exclude reference="usQ-QS-rLw"/>
-                                <exclude reference="591-XM-qze"/>
-                                <exclude reference="A8w-gQ-AhB"/>
-                                <exclude reference="YzC-bM-R3V"/>
-                                <exclude reference="a35-zl-mJc"/>
                                 <exclude reference="Bmn-Ke-HZi"/>
                                 <exclude reference="Dkf-lF-S9i"/>
                                 <exclude reference="LIB-01-zja"/>
                                 <exclude reference="oPq-CW-OUP"/>
+                                <exclude reference="591-XM-qze"/>
+                                <exclude reference="A8w-gQ-AhB"/>
+                                <exclude reference="YzC-bM-R3V"/>
+                                <exclude reference="a35-zl-mJc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="fLT-6B-AXj"/>
                                 <include reference="ouq-aZ-VtB"/>
-                                <exclude reference="BID-ai-egg"/>
-                                <include reference="X2o-bX-Ise"/>
                                 <include reference="DEb-qC-n0g"/>
                                 <exclude reference="JVA-Eq-ugb"/>
-                                <exclude reference="d00-3c-mcH"/>
                                 <include reference="tgZ-PM-PVw"/>
                                 <exclude reference="usQ-QS-rLw"/>
-                                <include reference="591-XM-qze"/>
-                                <include reference="A8w-gQ-AhB"/>
+                                <exclude reference="BID-ai-egg"/>
+                                <include reference="X2o-bX-Ise"/>
                                 <exclude reference="Dkf-lF-S9i"/>
                                 <exclude reference="Q6p-ff-dvB"/>
                                 <exclude reference="fTL-lc-W90"/>
                                 <exclude reference="oPq-CW-OUP"/>
+                                <include reference="591-XM-qze"/>
+                                <include reference="A8w-gQ-AhB"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
