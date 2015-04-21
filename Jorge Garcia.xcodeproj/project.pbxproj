@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D602ED691AE607A900B24BB4 /* creci.png in Resources */ = {isa = PBXBuildFile; fileRef = D602ED671AE607A900B24BB4 /* creci.png */; };
+		D602ED6A1AE607A900B24BB4 /* mack.png in Resources */ = {isa = PBXBuildFile; fileRef = D602ED681AE607A900B24BB4 /* mack.png */; };
+		D602ED6C1AE6091100B24BB4 /* highSchool.png in Resources */ = {isa = PBXBuildFile; fileRef = D602ED6B1AE6091100B24BB4 /* highSchool.png */; };
 		D61521361ADE9D1E006772DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61521351ADE9D1E006772DD /* AppDelegate.swift */; };
 		D61521381ADE9D1E006772DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61521371ADE9D1E006772DD /* ViewController.swift */; };
 		D615213B1ADE9D1F006772DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61521391ADE9D1F006772DD /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D602ED671AE607A900B24BB4 /* creci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creci.png; path = Content/Professional/creci.png; sourceTree = "<group>"; };
+		D602ED681AE607A900B24BB4 /* mack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mack.png; path = Content/Professional/mack.png; sourceTree = "<group>"; };
+		D602ED6B1AE6091100B24BB4 /* highSchool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = highSchool.png; path = Content/Academic/highSchool.png; sourceTree = "<group>"; };
 		D61521301ADE9D1E006772DD /* Jorge Garcia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jorge Garcia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61521341ADE9D1E006772DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61521351ADE9D1E006772DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D602ED661AE6079400B24BB4 /* Professional */ = {
+			isa = PBXGroup;
+			children = (
+				D602ED671AE607A900B24BB4 /* creci.png */,
+				D602ED681AE607A900B24BB4 /* mack.png */,
+			);
+			name = Professional;
+			sourceTree = "<group>";
+		};
 		D61521271ADE9D1E006772DD = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +188,7 @@
 		D6DF82161AE5C2B000784294 /* Academic */ = {
 			isa = PBXGroup;
 			children = (
+				D602ED6B1AE6091100B24BB4 /* highSchool.png */,
 				D6DF82171AE5C2C300784294 /* college.png */,
 				D6DF82181AE5C2C300784294 /* highSchool2.png */,
 			);
@@ -193,6 +209,7 @@
 		D6FDD3321AE4435500303405 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				D602ED661AE6079400B24BB4 /* Professional */,
 				D6DF821B1AE5C34500784294 /* background */,
 				D6DF82161AE5C2B000784294 /* Academic */,
 				D6DF820D1AE5B42200784294 /* Hobbies */,
@@ -306,11 +323,14 @@
 				D615213B1ADE9D1F006772DD /* Main.storyboard in Resources */,
 				D6DF821A1AE5C2C300784294 /* highSchool2.png in Resources */,
 				D6DF82231AE5CA4000784294 /* work.png in Resources */,
+				D602ED6C1AE6091100B24BB4 /* highSchool.png in Resources */,
 				D6DF82141AE5B44000784294 /* reading.png in Resources */,
 				D615213D1ADE9D1F006772DD /* Images.xcassets in Resources */,
 				D6DF82131AE5B44000784294 /* guitar.png in Resources */,
 				D6FDD33E1AE4646A00303405 /* ios.png in Resources */,
 				D6DF82151AE5B44000784294 /* swimming.png in Resources */,
+				D602ED6A1AE607A900B24BB4 /* mack.png in Resources */,
+				D602ED691AE607A900B24BB4 /* creci.png in Resources */,
 				D6DF82211AE5C64100784294 /* itunesU.png in Resources */,
 				D6DF821F1AE5C57700784294 /* xcode.png in Resources */,
 				D6FDD33F1AE4646A00303405 /* java.png in Resources */,

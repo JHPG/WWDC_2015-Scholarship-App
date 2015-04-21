@@ -104,8 +104,8 @@ class ViewController: UIViewController {
             titleLabel:"Professional",
             //backColor:UIColor(red: 52/255, green: 152/255, blue:219/255, alpha: 1),
             backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
-            contents: [UIImage(named: "ios")!
-                
+            contents: [UIImage(named: "creci")!,
+                UIImage(named: "mack")!
             ])
         showViewController(view, sender: nil)
     }
