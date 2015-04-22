@@ -45,11 +45,47 @@ class Animations: NSObject {
         let tempPos = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
         el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.height)
         
-        UIView.animateWithDuration(1, delay: 0.7, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+        UIView.animateWithDuration(1, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             el.frame.origin = tempPos
             //self.view.layoutIfNeeded()
         }, completion: nil)
     }
+    
+    func picAnimate(img:UIView, ball:UIView){
+        var imgTemp = img.transform
+        
+        UIView.animateWithDuration(0.7, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            
+            var x = img.center.x
+            var y = img.center.y
+            let transform = CGAffineTransformMakeRotation(CGFloat(M_PI_4))
+            img.transform = transform
+
+        }, completion:{ (value: Bool) in
+            UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
+                let transform2 = CGAffineTransformMakeRotation(-CGFloat(M_PI_4))
+                img.transform = transform2
+                ball.frame.origin = CGPoint(x: ball.superview!.frame.width, y: 0)
+                
+            }, completion:{ (value: Bool) in
+                
+                UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
+                    img.transform = imgTemp
+                }, completion: nil)
+            
+            })
+        })
+    }
+    
+    func insertBlurView (view: UIView, style: UIBlurEffectStyle) {
+        view.backgroundColor = UIColor.clearColor()
+        
+        var blurEffect = UIBlurEffect(style: style)
+        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        view.insertSubview(blurEffectView, atIndex: 0)
+    }
+    
     
     
 }

@@ -15,9 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnCyan: UIButton!
     @IBOutlet weak var btnBlue: UIButton!
     @IBOutlet weak var foto: UIImageView!
+    @IBOutlet weak var ball: UIImageView!
     
     var flag: Bool = true
-    var animation: Animations = Animations()
+    let animation: Animations = Animations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,8 @@ class ViewController: UIViewController {
             //
             flag = false
         }
+        
+        animation.picAnimate(foto, ball: ball);
     }
     
     
