@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-g4-ijX">
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8o8-g4-ijX">
                                 <rect key="frame" x="190" y="230" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="TFi-FV-emu"/>
@@ -58,7 +58,7 @@
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="2" height="2"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Gm-pIs">
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Gm-pIs">
                                 <rect key="frame" x="330" y="431" width="140" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="9Zu-OX-zmL"/>
@@ -92,7 +92,7 @@
                                     <action selector="btBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6rh-mR-maO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-yw-IyK">
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZ8-yw-IyK">
                                 <rect key="frame" x="355" y="308" width="115" height="115"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="djX-6g-GqP"/>
@@ -104,7 +104,7 @@
                                     <action selector="btCyan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hRD-G5-YmQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-Q0-ub1">
+                            <button opaque="NO" alpha="0.89999999999999991" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-Q0-ub1">
                                 <rect key="frame" x="185" y="360" width="130" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="hkw-vp-F4T"/>
@@ -121,13 +121,6 @@
                                     <action selector="btOrange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Al-gt-9Hb"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="squareBlue" translatesAutoresizingMaskIntoConstraints="NO" id="lBN-JZ-hrN">
-                                <rect key="frame" x="355" y="115" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="09L-Tx-Fu3"/>
-                                    <constraint firstAttribute="height" constant="30" id="F9h-DG-IcH"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,7 +142,6 @@
                             <constraint firstItem="tZ8-yw-IyK" firstAttribute="leading" secondItem="8o8-g4-ijX" secondAttribute="trailing" constant="2" id="Hu0-nt-Xra"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="height" secondItem="Qhi-Q0-ub1" secondAttribute="height" id="IR7-Fm-QNI"/>
                             <constraint firstItem="Qhi-Q0-ub1" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" constant="10" id="JVA-Eq-ugb"/>
-                            <constraint firstItem="lBN-JZ-hrN" firstAttribute="bottom" secondItem="2Jj-Oy-Tip" secondAttribute="bottom" constant="5" id="JuM-Yy-pe0"/>
                             <constraint firstItem="A9p-Gm-pIs" firstAttribute="centerX" secondItem="tZ8-yw-IyK" secondAttribute="centerX" constant="-10" id="LIB-01-zja"/>
                             <constraint firstItem="A9p-Gm-pIs" firstAttribute="trailing" secondItem="tZ8-yw-IyK" secondAttribute="trailing" priority="600" id="Q6p-ff-dvB"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="QQ2-au-nr9"/>
@@ -159,7 +151,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8o8-g4-ijX" secondAttribute="bottom" constant="421" id="YzC-bM-R3V"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A9p-Gm-pIs" secondAttribute="bottom" constant="124" id="a35-zl-mJc"/>
                             <constraint firstItem="gTs-1N-Vuz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="abO-Ht-ZIP"/>
-                            <constraint firstItem="lBN-JZ-hrN" firstAttribute="leading" secondItem="2Jj-Oy-Tip" secondAttribute="trailing" constant="5" id="eal-hW-BWa"/>
                             <constraint firstItem="8o8-g4-ijX" firstAttribute="centerX" secondItem="Qhi-Q0-ub1" secondAttribute="centerX" priority="900" id="fLT-6B-AXj">
                                 <variation key="widthClass=compact" constant="30"/>
                             </constraint>
@@ -240,7 +231,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="ball" destination="lBN-JZ-hrN" id="Rpa-If-TtC"/>
                         <outlet property="btiOSSkills" destination="8o8-g4-ijX" id="Oa6-K1-SeF"/>
                         <outlet property="btnBlue" destination="A9p-Gm-pIs" id="r7c-sr-bQl"/>
                         <outlet property="btnCyan" destination="tZ8-yw-IyK" id="AJT-XH-1wR"/>

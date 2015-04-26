@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -17,8 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var foto: UIImageView!
     @IBOutlet weak var ball: UIImageView!
     
-    var flag: Bool = true
+    var flag: Bool = true   //Animate only the first time
     let animation: Animations = Animations()
+    var playerLayer: AVPlayerLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +34,49 @@ class ViewController: UIViewController {
         animation.motionBackground (btnBlue, qtd:48)
         
         foto.layer.borderWidth = 1
-        foto.layer.cornerRadius = foto.frame.size.width/2   //Photo in circle frame
+        foto.layer.cornerRadius = foto.frame.size.width/2   //Photo with circle frame
         foto.clipsToBounds = true
+        foto.layer.shadowOpacity = 0.8
+        foto.layer.shadowRadius = 5.0
+        
+        makeSquare(btnCyan, color: UIColor.cyanColor())
+        makeSquare(btnBlue, color: UIColor.blueColor())
+        makeSquare(btnOrange, color: UIColor.orangeColor())
+        makeSquare(btiOSSkills, color: UIColor.purpleColor())
+        
+        
+        let moviePath: String = NSBundle.mainBundle().pathForResource("mov3", ofType: "mp4")!
+        let urlVideo = NSURL(fileURLWithPath: moviePath)
+        
+        
+        playerLayer = AVPlayerLayer(player: AVPlayer(URL: urlVideo))
+        playerLayer.frame = CGRect(x: 0, y: 30, width: self.view.bounds.width, height: self.view.bounds.height)
+        self.view.layer.insertSublayer(playerLayer, atIndex: 0) //Send to back
+        playerLayer.player.play()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "replayBackground:",
+            name: AVPlayerItemDidPlayToEndTimeNotification,
+            object: playerLayer.player.currentItem)
+    }
+    
+    func makeSquare(view:UIView, color:UIColor){
+        var l = view.layer
+        l.shadowOpacity = 0.4
+        l.shadowRadius = 5.0
+    }
+    
+    func replayBackground(notification: NSNotification){
+        playerLayer.player.currentItem.seekToTime(kCMTimeZero)
+        playerLayer.player.play()
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)) {
+            playerLayer.frame = CGRect(x: 0, y: -500, width: self.view.bounds.width, height: 1200)
+        } else {
+            playerLayer.frame = CGRect(x: 0, y: 30, width: self.view.bounds.width, height: self.view.bounds.height)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +95,7 @@ class ViewController: UIViewController {
             flag = false
         }
         
-        animation.picAnimate(foto, ball: ball);
+        //animation.picAnimate(foto, ball: ball){ };
     }
     
     
@@ -69,13 +112,14 @@ class ViewController: UIViewController {
                 UIImage(named: "web")!,
                 UIImage(named: "dotNet")!
             ])
-        showViewController(view, sender: nil)
-        
+        animation.picAnimate(btiOSSkills, ball: btiOSSkills){
+            self.showViewController(view, sender: nil)
+        }
     }
     
     @IBAction func btCyan(sender: AnyObject) {
         
-        var view = PageViewController(  image:UIImage(named:"garageBand"),
+        var view = PageViewController( image:UIImage(named:"garageBand"),
             titleLabel:"Hobbies",
             //backColor:UIColor(red: 26/255, green: 188/255, blue:156/255, alpha: 1),
             backColor:UIColor(red: 155/255, green: 89/255, blue: 182/255, alpha: 1),
@@ -85,7 +129,10 @@ class ViewController: UIViewController {
                 UIImage(named: "reading")!,
                 UIImage(named: "swimming")!
             ])
-        showViewController(view, sender: nil)
+        
+        animation.picAnimate(btnCyan, ball: btnCyan){
+            self.showViewController(view, sender: nil)
+        };
     }
     
     @IBAction func btOrange(sender: AnyObject) {
@@ -98,7 +145,9 @@ class ViewController: UIViewController {
             contents: [UIImage(named: "highSchool2")!,
                 UIImage(named: "college")!
             ])
-        showViewController(view, sender: nil)
+        animation.picAnimate(btnOrange, ball: btnOrange){
+            self.showViewController(view, sender: nil)
+        }
     }
     
     @IBAction func btBlue(sender: AnyObject) {
@@ -110,9 +159,27 @@ class ViewController: UIViewController {
             contents: [UIImage(named: "creci")!,
                 UIImage(named: "mack")!
             ])
-        showViewController(view, sender: nil)
+        animation.picAnimate(btnBlue, ball: btnBlue){
+            self.showViewController(view, sender: nil)
+        }
     }
     
+//    func addGif(){
+//        var filePath = NSBundle.mainBundle().pathForResource("gifTest", ofType: "gif")
+//        var gif = NSData(contentsOfFile: filePath!)
+//
+//        //var webViewBG = UIWebView(frame: self.view.frame)
+//        aniBackground.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
+//        aniBackground.backgroundColor = UIColor.blackColor()
+//        aniBackground.userInteractionEnabled = false;
+//        //self.view.addSubview(webViewBG)
+        
+//        var filter = UIView()
+//        filter.frame = self.view.frame
+//        filter.backgroundColor = UIColor.blackColor()
+//        filter.alpha = 0.05
+//        self.view.addSubview(filter)
+//    }
     
     
     

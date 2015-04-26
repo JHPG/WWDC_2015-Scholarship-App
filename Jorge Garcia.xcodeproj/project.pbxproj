@@ -16,6 +16,7 @@
 		D615213D1ADE9D1F006772DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D615213C1ADE9D1F006772DD /* Images.xcassets */; };
 		D615214C1ADE9D1F006772DD /* Jorge_GarciaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D615214B1ADE9D1F006772DD /* Jorge_GarciaTests.swift */; };
 		D656D2421AE39500000D11AE /* PostIt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D656D2411AE39500000D11AE /* PostIt.swift */; };
+		D674CC461AECC60600F7A01E /* mov3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D674CC451AECC60600F7A01E /* mov3.mp4 */; };
 		D6A963B31AE0072E00878FC1 /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B21AE0072E00878FC1 /* SkillsViewController.swift */; };
 		D6A963B61AE0287000878FC1 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B51AE0287000878FC1 /* Animations.swift */; };
 		D6A963B81AE1B1DB00878FC1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A963B71AE1B1DB00878FC1 /* PageViewController.swift */; };
@@ -59,6 +60,7 @@
 		D615214A1ADE9D1F006772DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D615214B1ADE9D1F006772DD /* Jorge_GarciaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jorge_GarciaTests.swift; sourceTree = "<group>"; };
 		D656D2411AE39500000D11AE /* PostIt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostIt.swift; sourceTree = "<group>"; };
+		D674CC451AECC60600F7A01E /* mov3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mov3.mp4; sourceTree = "<group>"; };
 		D6A963B21AE0072E00878FC1 /* SkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		D6A963B51AE0287000878FC1 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		D6A963B71AE1B1DB00878FC1 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		D6FDD3321AE4435500303405 /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				D674CC451AECC60600F7A01E /* mov3.mp4 */,
 				D602ED661AE6079400B24BB4 /* Professional */,
 				D6DF821B1AE5C34500784294 /* background */,
 				D6DF82161AE5C2B000784294 /* Academic */,
@@ -335,6 +338,7 @@
 				D6DF821F1AE5C57700784294 /* xcode.png in Resources */,
 				D6FDD33F1AE4646A00303405 /* java.png in Resources */,
 				D6FDD33D1AE4646A00303405 /* dotNet.png in Resources */,
+				D674CC461AECC60600F7A01E /* mov3.mp4 in Resources */,
 				D6DF821E1AE5C57700784294 /* garageBand.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
