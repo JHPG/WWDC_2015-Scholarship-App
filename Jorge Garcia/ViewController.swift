@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOrange: UIButton!
     @IBOutlet weak var btnCyan: UIButton!
     @IBOutlet weak var btnBlue: UIButton!
+    @IBOutlet weak var btnRed: UIButton!
     @IBOutlet weak var foto: UIImageView!
-    @IBOutlet weak var ball: UIImageView!
     
     var flag: Bool = true   //Animate only the first time
     let animation: Animations = Animations()
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
         animation.motionBackground (btnCyan, qtd:42)
         animation.motionBackground (btnOrange, qtd:45)
         animation.motionBackground (btnBlue, qtd:48)
+        animation.motionBackground (btnRed, qtd:50)
         
         foto.layer.borderWidth = 1
         foto.layer.cornerRadius = foto.frame.size.width/2   //Photo with circle frame
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
         makeSquare(btnBlue, color: UIColor.blueColor())
         makeSquare(btnOrange, color: UIColor.orangeColor())
         makeSquare(btiOSSkills, color: UIColor.purpleColor())
+        makeSquare(btnRed, color: UIColor.redColor())
         
         playerLayer = animation.backgroundVideo("mov5", type: "mp4", width: self.view.bounds.width, height: self.view.bounds.height)
         self.view.layer.insertSublayer(playerLayer, atIndex: 0) //Send to back
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
     }
     
     func makeSquare(view:UIView, color:UIColor){
+        //Color do nothing for a while
         var l = view.layer
         l.shadowOpacity = 0.4
         l.shadowRadius = 5.0
@@ -152,42 +155,23 @@ class ViewController: UIViewController {
         }
     }
     
-//    func addGif(){
-//        var filePath = NSBundle.mainBundle().pathForResource("gifTest", ofType: "gif")
-//        var gif = NSData(contentsOfFile: filePath!)
-//
-//        //var webViewBG = UIWebView(frame: self.view.frame)
-//        aniBackground.loadData(gif, MIMEType: "image/gif", textEncodingName: nil, baseURL: nil)
-//        aniBackground.backgroundColor = UIColor.blackColor()
-//        aniBackground.userInteractionEnabled = false;
-//        //self.view.addSubview(webViewBG)
+    @IBAction func btRed(sender: AnyObject) {
         
-//        var filter = UIView()
-//        filter.frame = self.view.frame
-//        filter.backgroundColor = UIColor.blackColor()
-//        filter.alpha = 0.05
-//        self.view.addSubview(filter)
-//    }
-    
-    
-    
-    
-    
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        if(btn == btn){
-//            var view = SkillsViewController();
-//            
-//            view.imgBackground.image = UIImage(named:"xCode_icon")
-//            view.titleLabel.text = "iOS Skills"
-//            view.view.backgroundColor = UIColor(red: 205/255, green: 20/255, blue: 100/255, alpha: 1)
-//            view.contents = [UIImage(named: "Skills_mapkit")!,
-//                UIImage(named: "bubble")!
-//            ]
-//
-//        }
-//    }
+        var view = PageViewController (image:UIImage(named:"appStore"),
+            titleLabel:"Projects",
+            backColor:UIColor(red: 135/255, green: 211/255, blue:124/255, alpha: 1),
+
+            contents: [UIImage(named: "imBored")!,
+                UIImage(named: "12-8")!,
+                UIImage(named: "flashlight")!,
+                UIImage(named: "stickman")!,
+                UIImage(named: "putsPuts")!
+            ])
+        animation.picAnimate(btnRed, ball: btnRed){
+            self.showViewController(view, sender: nil)
+        }
+        
+    }
     
     
   
