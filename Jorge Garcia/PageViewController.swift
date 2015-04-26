@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PageViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class PageViewController: UIViewController {
     var contents = [UIImage]()
     var contentAtual:Int = 0
     var detailLabel = UILabel()
+    var playerLayer: AVPlayerLayer!
     
     let animations:Animations = Animations()
     
@@ -53,12 +55,18 @@ class PageViewController: UIViewController {
         //Fundo
         let imgPos = CGRect(x: viewWidth-200, y: viewHeight-360, width:450, height:418) //Trocar depois (x=0,y=0)
         imgBackground.frame = imgPos
+        imgBackground.layer.shadowOffset = CGSize(width: -3, height: -3)
+        imgBackground.layer.shadowOpacity = 0.5
+        imgBackground.layer.shadowRadius = 10.0
         view.addSubview(imgBackground)
         
         //LabelTitle
         labelTitle.frame = CGRect(x:20, y:50, width:300, height:100)
-        labelTitle.textColor = UIColor.blackColor()
         labelTitle.font = UIFont(name: "AvenirNext-DemiBold", size: 33)
+        labelTitle.textColor = UIColor.whiteColor()
+        labelTitle.layer.shadowOffset = CGSize(width: 2, height: 2)
+        labelTitle.layer.shadowOpacity = 0.9
+        labelTitle.layer.shadowRadius = 3.0
         view.addSubview(labelTitle)
         
         //btnBack
@@ -84,17 +92,27 @@ class PageViewController: UIViewController {
             width: 250, height: 300)
         postItView.center = self.view.center;
         postItView.layer.cornerRadius = 30
-        //postItView.clipsToBounds = false
+        postItView.clipsToBounds = true
         postItView.layer.shadowColor = UIColor.blackColor().CGColor
         postItView.layer.shadowOffset = CGSizeMake(4, 4)
         postItView.layer.shadowOpacity = 0.8
         postItView.layer.shadowRadius = 5
+        postItView.clipsToBounds = false
+        
         view.addSubview(postItView)
+        
+        playerLayer = animations.backgroundVideo("mov5", type: "mp4", width: self.view.bounds.width, height: self.view.bounds.height)
+        self.view.layer.insertSublayer(playerLayer, atIndex: 0) //Send to back
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        drawView()
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation)) {
+            playerLayer.frame = CGRect(x: 0, y: -500, width: self.view.bounds.width, height: 1200)
+        } else {
+            playerLayer.frame = CGRect(x: 0, y: 30, width: self.view.bounds.width, height: self.view.bounds.height)
+        }
         
+        drawView()
     }
     
     func nextPostIt(){

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Animations: NSObject {
+    
+    var playerLayer = AVPlayerLayer()
    
     /** Add dynamic animation to background view  */
     func motionBackground (view: UIView, qtd: Int){
@@ -48,10 +51,12 @@ class Animations: NSObject {
     
     func bubble (el: UIView){
         let tempPos = CGPoint(x: el.frame.origin.x, y: el.frame.origin.y)
+        
         el.frame.origin = CGPoint(x: el.frame.origin.x, y: el.superview!.frame.height)
         
         UIView.animateWithDuration(1, delay: 0.8, options: UIViewAnimationOptions.CurveEaseOut, animations: {
             el.frame.origin = tempPos
+            //el.layer.cornerRadius = 0
             //self.view.layoutIfNeeded()
         }, completion: nil)
     }
@@ -94,6 +99,28 @@ class Animations: NSObject {
         //Construir
     }
     
+    func backgroundVideo (name:String, type:String, width:CGFloat, height:CGFloat) -> AVPlayerLayer{
+        
+        let moviePath: String = NSBundle.mainBundle().pathForResource(name, ofType: type)!
+        let urlVideo = NSURL(fileURLWithPath: moviePath)
+        playerLayer = AVPlayerLayer(player: AVPlayer(URL: urlVideo))
+        
+        playerLayer.frame = CGRect(x: 0, y: 20, width: width, height: height)
+        //self.view.layer.insertSublayer(playerLayer, atIndex: 0) //Send to back
+        playerLayer.player.play()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "replayBackground:",
+            name: AVPlayerItemDidPlayToEndTimeNotification,
+            object: playerLayer.player.currentItem)
+        
+        return playerLayer
+    }
+    
+    func replayBackground(notification: NSNotification){
+        playerLayer.player.currentItem.seekToTime(kCMTimeZero)
+        playerLayer.player.play()
+    }
     
     
 }

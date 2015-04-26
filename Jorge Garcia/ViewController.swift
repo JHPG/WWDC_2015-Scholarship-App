@@ -44,31 +44,8 @@ class ViewController: UIViewController {
         makeSquare(btnOrange, color: UIColor.orangeColor())
         makeSquare(btiOSSkills, color: UIColor.purpleColor())
         
-        
-        let moviePath: String = NSBundle.mainBundle().pathForResource("mov3", ofType: "mp4")!
-        let urlVideo = NSURL(fileURLWithPath: moviePath)
-        
-        
-        playerLayer = AVPlayerLayer(player: AVPlayer(URL: urlVideo))
-        playerLayer.frame = CGRect(x: 0, y: 30, width: self.view.bounds.width, height: self.view.bounds.height)
+        playerLayer = animation.backgroundVideo("mov5", type: "mp4", width: self.view.bounds.width, height: self.view.bounds.height)
         self.view.layer.insertSublayer(playerLayer, atIndex: 0) //Send to back
-        playerLayer.player.play()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "replayBackground:",
-            name: AVPlayerItemDidPlayToEndTimeNotification,
-            object: playerLayer.player.currentItem)
-    }
-    
-    func makeSquare(view:UIView, color:UIColor){
-        var l = view.layer
-        l.shadowOpacity = 0.4
-        l.shadowRadius = 5.0
-    }
-    
-    func replayBackground(notification: NSNotification){
-        playerLayer.player.currentItem.seekToTime(kCMTimeZero)
-        playerLayer.player.play()
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
@@ -77,6 +54,17 @@ class ViewController: UIViewController {
         } else {
             playerLayer.frame = CGRect(x: 0, y: 30, width: self.view.bounds.width, height: self.view.bounds.height)
         }
+    }
+    
+    func makeSquare(view:UIView, color:UIColor){
+        var l = view.layer
+        l.shadowOpacity = 0.4
+        l.shadowRadius = 5.0
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        playerLayer.player.play()
     }
 
     override func didReceiveMemoryWarning() {
