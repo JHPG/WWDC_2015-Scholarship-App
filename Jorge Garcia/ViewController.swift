@@ -82,6 +82,7 @@ class ViewController: UIViewController {
             animation.bubble (btnOrange)
             animation.bubble (btnBlue)
             animation.bubble (btnCyan)
+            animation.bubble (btnRed)
             //
             flag = false
         }
